@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Our Team — Success in Steps Therapy &amp; Counselling | Ottawa</title>
+<meta name="description" content="Independent associate positions available at Success in Steps, Ottawa. Furnished offices, flexible rental, referral network. Join a values-aligned clinic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --purple:#6035A0; --purple-mid:#7A4BB5; --purple-deep:#29165A;
+  --purple-light:#EDE6F7; --purple-pale:#F7F3FD;
+  --navy:#1C3450; --navy-mid:#243D5E; --navy-dark:#131D2E;
+  --cream:#F8F5F0; --warm-white:#FDFCFB; --sand:#E6DDD1;
+  --taupe:#BEB2A3; --stone:#867D74; --sage:#4A6E5A; --sage-light:#DDE8E2;
+  --gold:#9E7638; --gold-light:#EEE4D2; --ink:#1A1A1A; --muted:#65605A;
+  --nav-h:72px; --max-w:1160px; --r:16px; --r-sm:10px; --r-pill:100px;
+  --ease:cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--ink); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+img { display:block; max-width:100%; }
+a { color:inherit; }
+h1,h2,h3,h4 { font-family:'Cormorant Garamond',serif; font-weight:300; line-height:1.1; letter-spacing:-0.025em; }
+p { line-height:1.85; font-weight:300; color:var(--muted); }
+.eyebrow { font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; display:block; margin-bottom:1rem; }
+.eyebrow-line { display:inline-flex; align-items:center; gap:0.6rem; }
+.eyebrow-line::before { content:''; display:block; width:24px; height:1.5px; background:currentColor; opacity:0.55; flex-shrink:0; }
+.eyebrow--purple { color:var(--purple); } .eyebrow--sage { color:var(--sage); }
+.eyebrow--gold { color:var(--gold); } .eyebrow--faint { color:rgba(255,255,255,0.45); }
+.reveal { opacity:0; transform:translateY(24px); transition:opacity 0.75s var(--ease), transform 0.75s var(--ease); }
+.reveal.in { opacity:1; transform:none; }
+.d1 { transition-delay:0.08s; } .d2 { transition-delay:0.18s; } .d3 { transition-delay:0.3s; }
+.btn { display:inline-flex; align-items:center; gap:0.45rem; text-decoration:none; font-family:'DM Sans',sans-serif; font-size:0.84rem; font-weight:500; padding:0.85rem 1.8rem; border-radius:var(--r-pill); border:none; cursor:pointer; transition:all 0.35s var(--ease); }
+.btn-purple { background:var(--purple); color:#fff; }
+.btn-purple:hover { background:var(--purple-mid); transform:translateY(-2px); box-shadow:0 10px 28px rgba(96,53,160,0.28); }
+.btn-gold { background:var(--gold); color:#fff; }
+.btn-gold:hover { opacity:0.87; transform:translateY(-2px); }
+.btn-white { background:#fff; color:var(--navy); box-shadow:0 4px 20px rgba(0,0,0,0.1); }
+.btn-white:hover { transform:translateY(-2px); box-shadow:0 10px 32px rgba(0,0,0,0.15); }
+.btn-outline-white { background:transparent; color:rgba(255,255,255,0.82); border:1.5px solid rgba(255,255,255,0.28); }
+.btn-outline-white:hover { border-color:rgba(255,255,255,0.65); color:#fff; transform:translateY(-2px); }
+
+/* NAV */
+.nav { position:fixed; top:0; left:0; right:0; z-index:1000; height:var(--nav-h); display:flex; align-items:center; justify-content:space-between; padding:0 3rem; background:rgba(253,252,251,0.96); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:0 1px 0 var(--sand); }
+.nav-logo { display:flex; align-items:center; gap:0.7rem; text-decoration:none; flex-shrink:0; }
+.nav-logo img { width:56px; height:56px; border-radius:50%; object-fit:cover; }
+.nav-logo-text { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--ink); line-height:1.1; }
+.nav-logo-text small { display:block; font-family:'DM Sans',sans-serif; font-size:0.6rem; font-weight:400; color:var(--stone); letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+.nav-links { list-style:none; display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; font-size:0.84rem; font-weight:400; color:var(--stone); transition:color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--ink); }
+.nav-cta { background:var(--purple) !important; color:#fff !important; font-size:0.8rem !important; padding:0.58rem 1.35rem; border-radius:var(--r-pill); transition:all 0.3s var(--ease) !important; }
+.nav-cta:hover { background:var(--purple-mid) !important; transform:translateY(-1px); }
+.burger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.burger span { display:block; width:22px; height:1.5px; background:var(--ink); border-radius:2px; transition:all 0.35s var(--ease); }
+.burger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity:0; }
+.burger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+.nav-mobile { position:fixed; top:var(--nav-h); left:0; right:0; z-index:999; background:rgba(253,252,251,0.97); backdrop-filter:blur(16px); padding:1.2rem 2rem 2rem; border-bottom:1px solid var(--sand); display:none; flex-direction:column; opacity:0; transform:translateY(-8px); transition:opacity 0.28s ease, transform 0.28s ease; }
+.nav-mobile.open { display:flex; opacity:1; transform:none; }
+.nav-mobile a { text-decoration:none; font-size:1rem; font-weight:400; color:var(--ink); padding:0.9rem 0; border-bottom:1px solid var(--sand); }
+.nav-mobile a:last-child { border:none; margin-top:0.8rem; }
+.nav-mobile .nav-cta { text-align:center; justify-content:center; padding:0.85rem; border-radius:var(--r-sm); }
+
+/* PAGE HEADER */
+.page-header { padding-top:var(--nav-h); background:var(--purple-deep); display:grid; grid-template-columns:1.1fr 1fr; min-height:480px; overflow:hidden; }
+.ph-content { display:flex; flex-direction:column; justify-content:center; padding:5rem 3.5rem 5rem 6rem; }
+.ph-eyebrow { font-size:0.63rem; font-weight:500; letter-spacing:0.26em; text-transform:uppercase; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:0.6rem; margin-bottom:1.8rem; opacity:0; animation:fadeUp 0.7s 0.1s var(--ease) both; }
+.ph-eyebrow::before { content:''; width:24px; height:1.5px; background:rgba(255,255,255,0.28); flex-shrink:0; }
+.ph-content h1 { font-size:clamp(2.4rem,3.8vw,4.4rem); font-weight:300; color:#fff; line-height:1.06; letter-spacing:-0.03em; margin-bottom:1.3rem; opacity:0; animation:fadeUp 0.7s 0.22s var(--ease) both; }
+.ph-content h1 em { font-style:italic; color:rgba(200,175,245,0.9); }
+.ph-desc { font-size:0.95rem; line-height:1.85; color:rgba(255,255,255,0.5); font-weight:300; max-width:400px; margin-bottom:2rem; opacity:0; animation:fadeUp 0.7s 0.36s var(--ease) both; }
+.ph-btns { display:flex; gap:0.85rem; flex-wrap:wrap; opacity:0; animation:fadeUp 0.7s 0.5s var(--ease) both; }
+.ph-photo { overflow:hidden; }
+.ph-photo img { width:100%; height:100%; object-fit:cover; object-position:center 30%; animation:softZoom 20s ease-out forwards; }
+@keyframes softZoom { from{transform:scale(1.05)} to{transform:scale(1)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:none} }
+
+/* MODEL STRIP */
+.model-strip { background:var(--cream); border-bottom:1px solid var(--sand); padding:4rem 3rem; text-align:center; }
+.model-strip h2 { font-size:clamp(2rem,2.8vw,2.8rem); color:var(--navy); margin-bottom:0.8rem; }
+.model-strip p { font-size:0.94rem; max-width:700px; margin:0 auto; }
+
+/* PILLARS */
+.pillars-row {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  border-bottom:1px solid var(--sand);
+}
+.pillar-block {
+  padding:3rem 2.5rem; border-right:1px solid var(--sand);
+  transition:background 0.25s;
+}
+.pillar-block:last-child { border-right:none; }
+.pillar-block:hover { background:var(--purple-pale); }
+.pillar-icon { font-size:1.6rem; margin-bottom:1.2rem; }
+.pillar-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--navy); margin-bottom:0.7rem; }
+.pillar-block p { font-size:0.86rem; }
+
+/* PHOTO BREAK */
+.photo-break {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  height:clamp(260px,42vw,420px); overflow:hidden;
+}
+.photo-break-item { overflow:hidden; }
+.photo-break-item img { width:100%; height:100%; object-fit:cover; transition:transform 8s ease; }
+.photo-break-item:hover img { transform:scale(1.04); }
+
+/* CONTENT SECTIONS */
+.content-section { padding:8rem 3rem; border-top:1px solid var(--sand); }
+.content-section:nth-child(even) { background:var(--cream); }
+.content-inner { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:start; }
+
+.content-section h2 { font-size:clamp(2rem,2.8vw,3rem); color:var(--navy); margin-bottom:0.8rem; }
+.content-section h2 em { font-style:italic; color:var(--purple); }
+.content-section > .content-inner > div > p { font-size:0.94rem; margin-bottom:0.9rem; max-width:500px; }
+
+.check-list { list-style:none; display:flex; flex-direction:column; gap:0.7rem; margin-top:1.5rem; }
+.check-list li { display:flex; align-items:flex-start; gap:0.85rem; font-size:0.88rem; color:var(--ink); line-height:1.55; }
+.check-list li::before {
+  content:''; width:18px; height:18px; min-width:18px; border-radius:50%;
+  background:var(--sage-light); border:1.5px solid var(--sage); flex-shrink:0; margin-top:0.06rem;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%234A6E5A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 6.5l2.5 2.5 4.5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:center; background-size:11px;
+}
+
+.specialties-label { font-size:0.65rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.8rem; display:block; }
+.specialties-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; margin-top:0.6rem; }
+.specialty-chip {
+  background:var(--gold-light); border:1px solid #d0b882; border-radius:var(--r-sm);
+  padding:0.65rem 0.9rem; font-size:0.82rem; color:var(--navy); font-weight:400;
+  display:flex; align-items:center; gap:0.4rem;
+}
+.specialty-chip::before { content:'→'; color:var(--gold); font-size:0.7rem; }
+
+/* INCLUDED CARDS */
+.included-cards { display:flex; flex-direction:column; gap:1rem; }
+.included-card {
+  background:white; border:1px solid var(--sand); border-radius:var(--r-sm);
+  padding:1.4rem 1.5rem; display:flex; gap:1.1rem; align-items:flex-start;
+  transition:box-shadow 0.25s, transform 0.25s;
+}
+.included-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.07); transform:translateY(-1px); }
+.included-icon { font-size:1.3rem; flex-shrink:0; margin-top:0.1rem; }
+.included-title { font-size:0.9rem; font-weight:500; color:var(--navy); margin-bottom:0.25rem; }
+.included-desc { font-size:0.82rem; color:var(--stone); line-height:1.65; font-weight:300; }
+
+/* APPLY STEPS */
+.apply-steps { display:flex; flex-direction:column; gap:1.5rem; margin-top:2rem; }
+.apply-step { display:flex; gap:1.2rem; align-items:flex-start; }
+.step-num {
+  width:36px; height:36px; min-width:36px; border-radius:50%;
+  background:var(--purple); color:#fff;
+  font-family:'Cormorant Garamond',serif; font-size:0.9rem; font-weight:300;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.step-title { font-size:0.9rem; font-weight:500; color:var(--navy); margin-bottom:0.25rem; }
+.step-desc { font-size:0.83rem; color:var(--stone); line-height:1.65; font-weight:300; }
+
+/* APPLY CARD */
+.apply-card {
+  background:var(--purple-deep); border-radius:var(--r);
+  padding:3rem 2.5rem; position:relative; overflow:hidden;
+}
+.apply-card::before {
+  content:''; position:absolute; bottom:-60px; right:-60px;
+  width:220px; height:220px; border-radius:50%;
+  background:rgba(255,255,255,0.04); pointer-events:none;
+}
+.apply-card .ac-label { font-size:0.63rem; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:0.8rem; }
+.apply-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.7rem; color:#fff; line-height:1.2; margin-bottom:0.9rem; }
+.apply-card h3 em { font-style:italic; color:rgba(200,175,245,0.9); }
+.apply-card p { font-size:0.88rem; color:rgba(255,255,255,0.52); line-height:1.8; font-weight:300; margin-bottom:1.5rem; }
+.apply-divider { border:none; border-top:1px solid rgba(255,255,255,0.1); margin:1.5rem 0; }
+.contact-detail { display:flex; align-items:flex-start; gap:0.8rem; margin-bottom:0.9rem; font-size:0.86rem; color:rgba(255,255,255,0.58); font-weight:300; }
+.contact-detail a { color:rgba(255,255,255,0.82); text-decoration:none; transition:color 0.2s; }
+.contact-detail a:hover { color:#fff; }
+.contact-icon { width:32px; height:32px; border-radius:8px; background:rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; font-size:0.85rem; flex-shrink:0; }
+
+/* CTA */
+.cta-section { background:var(--navy); padding:8rem 3rem; text-align:center; position:relative; overflow:hidden; }
+.cta-section::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:800px; height:800px; border-radius:50%; background:radial-gradient(circle, rgba(96,53,160,0.22) 0%, transparent 62%); pointer-events:none; }
+.cta-inner { position:relative; z-index:1; max-width:620px; margin:0 auto; }
+.cta-section h2 { font-size:clamp(2.2rem,3.5vw,4rem); color:#fff; margin-bottom:1.2rem; }
+.cta-section h2 em { font-style:italic; color:rgba(196,170,240,0.9); }
+.cta-section p { font-size:0.97rem; color:rgba(255,255,255,0.48); margin-bottom:2.8rem; line-height:1.85; }
+.cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+/* FOOTER */
+.footer-ocf { background:#15232F; border-bottom:1px solid rgba(255,255,255,0.06); padding:2.2rem 3rem; }
+.footer-ocf-inner { max-width:var(--max-w); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:3rem; }
+.ocf-label { font-size:0.62rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.45rem; display:block; }
+.ocf-text { font-size:0.83rem; color:rgba(255,255,255,0.42); line-height:1.75; font-weight:300; max-width:580px; }
+.ocf-text strong { color:rgba(255,255,255,0.72); font-weight:500; }
+.ocf-logo { height:52px; width:auto; filter:brightness(0) invert(1) opacity(0.65); transition:opacity 0.2s; flex-shrink:0; }
+footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
+.footer-grid { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:1.7fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
+.footer-brand-row { display:flex; align-items:center; gap:0.7rem; margin-bottom:1.1rem; }
+.footer-brand-row img { width:36px; height:36px; border-radius:50%; opacity:0.85; }
+.footer-brand-name { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:400; color:#fff; line-height:1.1; }
+.footer-brand-name small { display:block; font-family:'DM Sans',sans-serif; font-size:0.59rem; color:rgba(255,255,255,0.3); letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+.footer-desc { font-size:0.82rem; color:rgba(255,255,255,0.38); line-height:1.75; font-weight:300; max-width:280px; margin-bottom:0.8rem; }
+.footer-addr { font-size:0.76rem; color:rgba(255,255,255,0.25); line-height:1.7; font-weight:300; }
+.footer-col h4 { font-size:0.62rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.25); margin-bottom:1rem; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+.footer-col a { text-decoration:none; font-size:0.82rem; color:rgba(255,255,255,0.4); font-weight:300; transition:color 0.2s; }
+.footer-col a:hover { color:rgba(255,255,255,0.78); }
+.footer-bottom { max-width:var(--max-w); margin:0 auto; border-top:1px solid rgba(255,255,255,0.07); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; font-size:0.73rem; color:rgba(255,255,255,0.25); }
+.social-row { display:flex; gap:0.7rem; }
+.social-btn { width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:0.7rem; font-weight:500; color:rgba(255,255,255,0.38); transition:background 0.2s, color 0.2s; }
+.social-btn:hover { background:rgba(255,255,255,0.15); color:#fff; }
+
+/* RESPONSIVE */
+@media (max-width:900px) {
+  .nav { padding:0 1.5rem; } .nav-links { display:none; } .burger { display:flex; }
+  .page-header { grid-template-columns:1fr; }
+  .ph-photo { min-height:56vw; }
+  .ph-content { padding:3rem 2rem; }
+  .pillars-row { grid-template-columns:1fr 1fr; }
+  .pillar-block { border-right:none; border-bottom:1px solid var(--sand); }
+  .pillar-block:nth-child(odd) { border-right:1px solid var(--sand); }
+  .photo-break { grid-template-columns:1fr; height:56vw; }
+  .photo-break-item:not(:first-child) { display:none; }
+  .content-section { padding:5rem 1.5rem; }
+  .content-inner { grid-template-columns:1fr; gap:3rem; }
+  .specialties-grid { grid-template-columns:1fr; }
+  .cta-section { padding:5rem 1.5rem; }
+  .footer-ocf { padding:1.5rem; }
+  .footer-ocf-inner { flex-direction:column; gap:1.5rem; }
+  footer { padding:2.5rem 1.5rem 1.5rem; }
+  .footer-grid { grid-template-columns:1fr; gap:2rem; }
+  .footer-bottom { flex-direction:column; gap:1rem; text-align:center; }
+}
+@media (max-width:600px) {
+  .pillars-row { grid-template-columns:1fr; }
+  .pillar-block { border-right:none; }
+  .cta-btns { flex-direction:column; align-items:center; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+    <div class="nav-logo-text">Success in Steps<small>Therapy &amp; Counselling</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About Sylvia</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#clinic">Our Clinic</a></li>
+    <li><a href="our-team.html">Our Team</a></li>
+    <li><a href="join-our-team.html" class="active">Join Our Team</a></li>
+    <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+  </ul>
+  <button class="burger" id="burgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="mobileNav">
+  <a href="index.html#about">About Sylvia</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#clinic">Our Clinic</a>
+  <a href="our-team.html">Our Team</a>
+  <a href="join-our-team.html">Join Our Team</a>
+  <a href="contact.html" class="nav-cta">Book a Session</a>
+</nav>
+
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-content">
+    <div class="ph-eyebrow">Opportunities for Independent Associates · Ottawa</div>
+    <h1>A professional home<br>for your <em>private practice</em></h1>
+    <p class="ph-desc">Are you a Registered Psychotherapist or Clinical Associate ready to build the practice you've envisioned — with the support of an established, values-aligned clinic behind you?</p>
+    <div class="ph-btns">
+      <a href="#apply" class="btn btn-white">Reach Out to Sylvia</a>
+      <a href="#model" class="btn btn-outline-white">Learn About Our Model</a>
+    </div>
+  </div>
+  <div class="ph-photo">
+    <img src="Branding - WebSize/Success_in_Steps_Branding_004_websize.jpg"
+         alt="Success in Steps clinic entrance — logo wall and reception, Ottawa">
+  </div>
+</div>
+
+
+<!-- MODEL STRIP -->
+<div id="model" class="model-strip">
+  <div class="reveal">
+    <span class="eyebrow eyebrow--purple eyebrow-line" style="justify-content:center;">Our Model</span>
+    <h2>Professional Freedom &amp; Shared Excellence</h2>
+    <p>We understand that running a private practice can feel isolating. Our clinic-within-a-clinic, rent-based model gives you everything you need to focus on what you do best — while remaining completely your own boss.</p>
+  </div>
+</div>
+
+
+<!-- PILLARS -->
+<div class="pillars-row">
+  <div class="pillar-block reveal">
+    <div class="pillar-icon">🗝️</div>
+    <div class="pillar-title">Autonomy</div>
+    <p>Maintain full control over your schedule, client load, and clinical approach. Your practice, your way — always.</p>
+  </div>
+  <div class="pillar-block reveal d1">
+    <div class="pillar-icon">🛋️</div>
+    <div class="pillar-title">Professional Space</div>
+    <p>Beautifully designed, fully furnished therapy rooms — thoughtfully appointed for individuals, couples, or families.</p>
+  </div>
+  <div class="pillar-block reveal d2">
+    <div class="pillar-icon">🏷️</div>
+    <div class="pillar-title">Your Identity</div>
+    <p>Benefit from the credibility of an established clinic brand while fully maintaining your own independent business identity.</p>
+  </div>
+  <div class="pillar-block reveal d3">
+    <div class="pillar-icon">🤝</div>
+    <div class="pillar-title">Referral Network</div>
+    <p>Join a community of specialized associates, creating opportunities for internal referrals and collegial consultation.</p>
+  </div>
+</div>
+
+
+<!-- PHOTO BREAK -->
+<div class="photo-break">
+  <div class="photo-break-item">
+    <img src="Branding - WebSize/Success_in_Steps_Branding_009_websize.jpg" alt="Welcoming waiting room at Success in Steps">
+  </div>
+  <div class="photo-break-item">
+    <img src="Branding - WebSize/Success_in_Steps_Branding_011_websize.jpg" alt="Serenity print detail in therapy office">
+  </div>
+  <div class="photo-break-item">
+    <img src="Branding - WebSize/Success_in_Steps_Branding_025_websize.jpg" alt="Therapy office interior at Success in Steps">
+  </div>
+</div>
+
+
+<!-- WHAT WE LOOK FOR -->
+<section id="look-for" class="content-section">
+  <div class="content-inner">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--sage eyebrow-line">What We Look For</span>
+      <h2>Practitioners who share<br><em>our values</em></h2>
+      <p>We welcome clinicians who bring their own strengths and style, while sharing our warm, client-centred approach and a genuine commitment to growth — personally and professionally.</p>
+      <ul class="check-list">
+        <li>Registration with the CRPO or equivalent body, in good standing</li>
+        <li>A Master's degree in Counselling, Social Work, Psychology, or equivalent</li>
+        <li>Experience working with a range of clients and presenting concerns</li>
+        <li>Commitment to evidence-informed, ethical, and compassionate practice</li>
+        <li>Strong interpersonal and communication skills</li>
+        <li>Professional liability insurance through a recognized organization</li>
+        <li>A collaborative spirit and openness to peer consultation</li>
+      </ul>
+    </div>
+    <div class="reveal d2">
+      <span class="specialties-label">Specializations We Especially Welcome</span>
+      <p style="font-size:0.88rem; margin-bottom:1rem;">We're particularly interested in practitioners with expertise that complements our current offerings:</p>
+      <div class="specialties-grid">
+        <div class="specialty-chip">Anxiety &amp; Trauma</div>
+        <div class="specialty-chip">Parenting &amp; Family Dynamics</div>
+        <div class="specialty-chip">Couple &amp; Family Therapy</div>
+        <div class="specialty-chip">Grief &amp; Loss</div>
+        <div class="specialty-chip">Life Transitions &amp; Resilience</div>
+        <div class="specialty-chip">Self-Esteem &amp; Identity</div>
+        <div class="specialty-chip">Adolescent Therapy</div>
+        <div class="specialty-chip">Chronic Illness Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT'S INCLUDED -->
+<section class="content-section">
+  <div class="content-inner">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--purple eyebrow-line">What's Included</span>
+      <h2>Everything you need,<br><em>nothing you don't</em></h2>
+      <p>Our rent-based model removes the administrative burden of finding and maintaining professional space — so you can show up fully for your clients every single session.</p>
+      <p>You rent only the days and times you need, with 60 days notice by either party should circumstances change.</p>
+    </div>
+    <div class="included-cards reveal d2">
+      <div class="included-card">
+        <div class="included-icon">📅</div>
+        <div>
+          <div class="included-title">Flexible Rental</div>
+          <div class="included-desc">Choose the specific days and times that work for your practice. Scale up or down as your caseload evolves — with 60 days notice by either party.</div>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon">🌐</div>
+        <div>
+          <div class="included-title">Digital Presence</div>
+          <div class="included-desc">A dedicated profile on our Associates page, with direct links to your own booking platform so clients can reach you directly.</div>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon">🏢</div>
+        <div>
+          <div class="included-title">Fully Furnished Offices</div>
+          <div class="included-desc">Thoughtfully designed, professionally furnished therapy rooms suitable for individual, parent, or family sessions — ready from day one.</div>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon">📶</div>
+        <div>
+          <div class="included-title">Full Amenities</div>
+          <div class="included-desc">High-speed internet, secure building access, and a calm private waiting area to welcome your clients comfortably.</div>
+        </div>
+      </div>
+      <div class="included-card">
+        <div class="included-icon">💬</div>
+        <div>
+          <div class="included-title">Collegial Community</div>
+          <div class="included-desc">Access to a peer network of like-minded clinicians for informal consultation, referrals, and the kind of professional connection that sustains great practice.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW TO APPLY -->
+<section id="apply" class="content-section">
+  <div class="content-inner">
+    <div class="reveal">
+      <span class="eyebrow eyebrow--gold eyebrow-line">How to Apply</span>
+      <h2>Take the<br><em>next step</em></h2>
+      <p>If you're ready to grow your practice within a collaborative, empowering environment — we would genuinely love to hear from you. The process is straightforward and conversational.</p>
+      <div class="apply-steps">
+        <div class="apply-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Reach out to Sylvia</div>
+            <div class="step-desc">Send an email introducing yourself — who you are, your training background, and what draws you to Success in Steps.</div>
+          </div>
+        </div>
+        <div class="apply-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Share your CV or résumé</div>
+            <div class="step-desc">Include a brief note outlining your areas of focus, your therapeutic approach, and your availability.</div>
+          </div>
+        </div>
+        <div class="apply-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Come for a conversation &amp; tour</div>
+            <div class="step-desc">If there's a potential fit, Sylvia will invite you to visit the clinic, see the space in person, and have an open conversation about what this arrangement could look like for you.</div>
+          </div>
+        </div>
+        <div class="apply-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">Welcome to the team</div>
+            <div class="step-desc">Once details are confirmed, you'll be set up with your profile, office access, and everything you need to begin seeing clients.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="apply-card reveal d2">
+      <div class="ac-label">Ready to connect?</div>
+      <h3>We'd love to<br><em>hear from you</em></h3>
+      <p>Whether you have questions about the model, want to discuss availability, or are ready to move forward — Sylvia is happy to have a conversation. There's no pressure, just an open door.</p>
+      <hr class="apply-divider">
+      <div class="contact-detail">
+        <div class="contact-icon">✉️</div>
+        <span>Email: <a href="mailto:info@successinsteps.ca">info@successinsteps.ca</a></span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <span>111 Colonnade Road North, Suite 201<br>Ottawa, Ontario K2E 7M3</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">🌐</div>
+        <span><a href="contact.html">successinsteps.ca/contact</a></span>
+      </div>
+      <a href="contact.html" class="btn btn-gold" style="margin-top:1rem;">Contact Sylvia Today →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="eyebrow eyebrow--faint eyebrow-line" style="justify-content:center;">Be Part of Something Good</span>
+    <h2>Your practice,<br><em>your community</em></h2>
+    <p>Join a team of skilled, compassionate clinicians who believe in doing great work — and supporting one another along the way.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-white">Connect with Sylvia</a>
+      <a href="our-team.html" class="btn btn-outline-white">Meet Our Team</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<div class="footer-ocf">
+  <div class="footer-ocf-inner">
+    <div>
+      <span class="ocf-label">In Collaboration With</span>
+      <p class="ocf-text">Sylvia Corzato is a proud counselling provider with the <strong>Ottawa Cancer Foundation</strong>, offering psychotherapy support as part of their mental health programs for individuals and families affected by cancer.</p>
+    </div>
+    <img class="ocf-logo" src="https://successinsteps.ca/wp-content/uploads/elementor/thumbs/20240527141414_ocf_logo_eng_colour_rgb-r352ad9nhcfo9lrd6u8r734r4nv5w7jf971kjtxu68.png" alt="Ottawa Cancer Foundation">
+  </div>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-row">
+        <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+        <div class="footer-brand-name">Success in Steps<small>Therapy &amp; Counselling</small></div>
+      </div>
+      <p class="footer-desc">Compassionate psychotherapy and counselling in Ottawa, Ontario. Serving individuals and families since 2016.</p>
+      <p class="footer-addr">111 Colonnade Road North, Suite 201<br>Ottawa, Ontario K2E 7M3</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html#about">About Sylvia</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="join-our-team.html">Join Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#individual">Individual Counselling (15+)</a></li>
+        <li><a href="services.html#parent">Parent Counselling</a></li>
+        <li><a href="services.html#family">Family Counselling</a></li>
+        <li><a href="contact.html">Book a Session</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Success in Steps. All rights reserved.</span>
+    <div class="social-row">
+      <a href="https://www.facebook.com/successinsteps" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      <a href="https://www.linkedin.com/in/sylvia-corzato-successinsteps/" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://www.instagram.com/success.in.steps.clinic" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+const burger = document.getElementById('burgerBtn');
+const mob = document.getElementById('mobileNav');
+burger.addEventListener('click', () => {
+  const o = burger.classList.toggle('open');
+  mob.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open'); mob.classList.remove('open'); document.body.style.overflow = '';
+}));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold:0.08, rootMargin:'0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

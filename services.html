@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Success in Steps Therapy &amp; Counselling | Ottawa</title>
+<meta name="description" content="Individual, parent, and family counselling in Ottawa. Evidence-informed psychotherapy for teens, adults, and families with Sylvia Corzato, RP, MACP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+
+/* ── TOKENS ── */
+:root {
+  --purple:       #6035A0;
+  --purple-mid:   #7A4BB5;
+  --purple-deep:  #29165A;
+  --purple-light: #EDE6F7;
+  --purple-pale:  #F7F3FD;
+  --navy:         #1C3450;
+  --navy-mid:     #243D5E;
+  --navy-dark:    #131D2E;
+  --cream:        #F8F5F0;
+  --warm-white:   #FDFCFB;
+  --sand:         #E6DDD1;
+  --taupe:        #BEB2A3;
+  --stone:        #867D74;
+  --sage:         #4A6E5A;
+  --sage-light:   #DDE8E2;
+  --gold:         #9E7638;
+  --gold-light:   #EEE4D2;
+  --ink:          #1A1A1A;
+  --muted:        #65605A;
+  --nav-h:        72px;
+  --max-w:        1160px;
+  --r:            16px;
+  --r-sm:         10px;
+  --r-pill:       100px;
+  --ease:         cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--ink); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+img { display:block; max-width:100%; }
+a { color:inherit; }
+
+h1,h2,h3,h4 { font-family:'Cormorant Garamond',serif; font-weight:300; line-height:1.1; letter-spacing:-0.025em; }
+p { line-height:1.85; font-weight:300; color:var(--muted); }
+.eyebrow { font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; display:block; margin-bottom:1rem; }
+.eyebrow-line { display:inline-flex; align-items:center; gap:0.6rem; }
+.eyebrow-line::before { content:''; display:block; width:24px; height:1.5px; background:currentColor; opacity:0.55; flex-shrink:0; }
+.eyebrow--purple { color:var(--purple); }
+.eyebrow--sage   { color:var(--sage); }
+.eyebrow--gold   { color:var(--gold); }
+.eyebrow--faint  { color:rgba(255,255,255,0.45); }
+.eyebrow--stone  { color:var(--stone); }
+
+.reveal { opacity:0; transform:translateY(24px); transition:opacity 0.75s var(--ease), transform 0.75s var(--ease); }
+.reveal.in { opacity:1; transform:none; }
+.d1 { transition-delay:0.08s; } .d2 { transition-delay:0.18s; } .d3 { transition-delay:0.3s; }
+
+.btn { display:inline-flex; align-items:center; gap:0.45rem; text-decoration:none; font-family:'DM Sans',sans-serif; font-size:0.84rem; font-weight:500; letter-spacing:0.01em; padding:0.85rem 1.8rem; border-radius:var(--r-pill); border:none; cursor:pointer; transition:all 0.35s var(--ease); }
+.btn-purple  { background:var(--purple); color:#fff; }
+.btn-purple:hover  { background:var(--purple-mid); transform:translateY(-2px); box-shadow:0 10px 28px rgba(96,53,160,0.28); }
+.btn-white   { background:#fff; color:var(--navy); box-shadow:0 4px 20px rgba(0,0,0,0.1); }
+.btn-white:hover   { transform:translateY(-2px); box-shadow:0 10px 32px rgba(0,0,0,0.15); }
+.btn-outline-white { background:transparent; color:rgba(255,255,255,0.82); border:1.5px solid rgba(255,255,255,0.28); }
+.btn-outline-white:hover { border-color:rgba(255,255,255,0.65); color:#fff; transform:translateY(-2px); }
+
+/* ── NAV ── */
+.nav { position:fixed; top:0; left:0; right:0; z-index:1000; height:var(--nav-h); display:flex; align-items:center; justify-content:space-between; padding:0 3rem; background:rgba(253,252,251,0.96); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:0 1px 0 var(--sand); transition:background 0.4s ease, box-shadow 0.4s ease; }
+.nav-logo { display:flex; align-items:center; gap:0.7rem; text-decoration:none; flex-shrink:0; }
+.nav-logo img { width:56px; height:56px; border-radius:50%; object-fit:cover; }
+.nav-logo-text { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--ink); line-height:1.1; }
+.nav-logo-text small { display:block; font-family:'DM Sans',sans-serif; font-size:0.6rem; font-weight:400; color:var(--stone); letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+.nav-links { list-style:none; display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; font-size:0.84rem; font-weight:400; color:var(--stone); transition:color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--ink); }
+.nav-cta { background:var(--purple) !important; color:#fff !important; font-size:0.8rem !important; padding:0.58rem 1.35rem; border-radius:var(--r-pill); transition:all 0.3s var(--ease) !important; }
+.nav-cta:hover { background:var(--purple-mid) !important; transform:translateY(-1px); }
+.burger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.burger span { display:block; width:22px; height:1.5px; background:var(--ink); border-radius:2px; transition:all 0.35s var(--ease); }
+.burger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity:0; }
+.burger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+.nav-mobile { position:fixed; top:var(--nav-h); left:0; right:0; z-index:999; background:rgba(253,252,251,0.97); backdrop-filter:blur(16px); padding:1.2rem 2rem 2rem; border-bottom:1px solid var(--sand); display:none; flex-direction:column; opacity:0; transform:translateY(-8px); transition:opacity 0.28s ease, transform 0.28s ease; }
+.nav-mobile.open { display:flex; opacity:1; transform:none; }
+.nav-mobile a { text-decoration:none; font-size:1rem; font-weight:400; color:var(--ink); padding:0.9rem 0; border-bottom:1px solid var(--sand); }
+.nav-mobile a:last-child { border:none; margin-top:0.8rem; }
+.nav-mobile .nav-cta { text-align:center; justify-content:center; padding:0.85rem; border-radius:var(--r-sm); }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding-top:var(--nav-h);
+  background:var(--purple-deep);
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  min-height:460px;
+  overflow:hidden;
+}
+.ph-content {
+  display:flex; flex-direction:column; justify-content:center;
+  padding:5rem 3.5rem 5rem 6rem;
+}
+.ph-eyebrow {
+  font-size:0.63rem; font-weight:500; letter-spacing:0.26em; text-transform:uppercase;
+  color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:0.6rem;
+  margin-bottom:1.8rem;
+  opacity:0; animation:fadeUp 0.7s 0.1s var(--ease) both;
+}
+.ph-eyebrow::before { content:''; width:24px; height:1.5px; background:rgba(255,255,255,0.28); flex-shrink:0; }
+.ph-content h1 {
+  font-size:clamp(2.4rem, 3.8vw, 4.4rem); font-weight:300; color:#fff;
+  line-height:1.06; letter-spacing:-0.03em; margin-bottom:1.3rem;
+  opacity:0; animation:fadeUp 0.7s 0.22s var(--ease) both;
+}
+.ph-content h1 em { font-style:italic; color:rgba(200,175,245,0.9); }
+.ph-desc {
+  font-size:0.95rem; line-height:1.85; color:rgba(255,255,255,0.5); font-weight:300;
+  max-width:400px; opacity:0; animation:fadeUp 0.7s 0.36s var(--ease) both;
+}
+.ph-photo { overflow:hidden; }
+.ph-photo img { width:100%; height:100%; object-fit:cover; object-position:center 25%; animation:softZoom 20s ease-out forwards; }
+@keyframes softZoom { from{transform:scale(1.05)} to{transform:scale(1)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:none} }
+
+/* ── STICKY TAB NAV ── */
+.svc-tabs {
+  background:var(--cream); border-bottom:1px solid var(--sand);
+  display:flex; justify-content:center;
+  position:sticky; top:var(--nav-h); z-index:50;
+}
+.svc-tab {
+  padding:1.1rem 2.2rem; font-family:'DM Sans',sans-serif;
+  font-size:0.8rem; font-weight:500; color:var(--stone);
+  text-decoration:none; letter-spacing:0.04em;
+  border-bottom:2px solid transparent; transition:color 0.2s, border-color 0.2s;
+  white-space:nowrap;
+}
+.svc-tab:hover { color:var(--navy); }
+.svc-tab.active { color:var(--purple); border-bottom-color:var(--purple); }
+
+/* ── SHARED SECTION ── */
+.section-inner { max-width:var(--max-w); margin:0 auto; padding:0 3rem; }
+
+/* ── AREAS WE SUPPORT ── */
+.areas-section { padding:7rem 3rem; background:var(--warm-white); }
+.areas-header { text-align:center; max-width:580px; margin:0 auto 3.5rem; }
+.areas-header h2 { font-size:clamp(2rem,2.8vw,3rem); color:var(--navy); margin-bottom:0.8rem; }
+.areas-grid {
+  max-width:var(--max-w); margin:0 auto;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+  background:var(--sand); border:1px solid var(--sand);
+  border-radius:var(--r); overflow:hidden;
+}
+.area-card {
+  background:var(--purple-deep); padding:2rem 1.8rem;
+  transition:background 0.25s;
+}
+.area-card:hover { background:#32196a; }
+.area-icon { font-size:1.2rem; margin-bottom:1rem; }
+.area-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:300; color:#fff; margin-bottom:0.8rem; line-height:1.3; }
+.area-card ul { list-style:none; display:flex; flex-direction:column; gap:0.35rem; }
+.area-card li { font-size:0.79rem; color:rgba(255,255,255,0.48); font-weight:300; padding-left:1rem; position:relative; }
+.area-card li::before { content:'–'; position:absolute; left:0; color:rgba(255,255,255,0.25); }
+
+/* ── SERVICE SECTIONS ── */
+.svc-section { padding:7rem 3rem; border-top:1px solid var(--sand); }
+.svc-section:nth-child(even) { background:var(--cream); }
+.svc-section:nth-child(odd) { background:var(--warm-white); }
+
+.svc-section-inner { max-width:var(--max-w); margin:0 auto; }
+.svc-intro-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:5rem; align-items:start; margin-bottom:3rem; }
+.svc-intro-grid.rev { direction:rtl; }
+.svc-intro-grid.rev > * { direction:ltr; }
+
+.svc-text h2 { font-size:clamp(2rem,2.8vw,3rem); color:var(--navy); margin-bottom:1rem; }
+.svc-text h2 em { font-style:italic; color:var(--purple); }
+.svc-text p { font-size:0.94rem; margin-bottom:0.9rem; max-width:520px; }
+
+.approach-block {
+  background:var(--purple-pale); border:1px solid var(--purple-light);
+  border-radius:var(--r-sm); padding:1.8rem 2rem; margin:1.8rem 0;
+}
+.approach-block h4 { font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--navy); margin-bottom:0.6rem; }
+.approach-block p { font-size:0.87rem; }
+
+.pull-quote {
+  border-left:3px solid var(--purple-light); padding:1rem 1.6rem;
+  background:var(--purple-pale); border-radius:0 var(--r-sm) var(--r-sm) 0; margin:1.5rem 0;
+}
+.pull-quote p { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--navy); line-height:1.7; font-weight:300; }
+.pull-quote cite { display:block; font-size:0.72rem; font-style:normal; color:var(--stone); margin-top:0.5rem; letter-spacing:0.06em; }
+
+.svc-photo { border-radius:var(--r); overflow:hidden; box-shadow:0 20px 60px rgba(26,26,26,0.12); }
+.svc-photo img { width:100%; aspect-ratio:4/3; object-fit:cover; transition:transform 0.5s ease; }
+.svc-photo:hover img { transform:scale(1.03); }
+
+.check-label { font-size:0.65rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--stone); margin-top:1.6rem; margin-bottom:0.8rem; }
+.check-list { list-style:none; display:flex; flex-direction:column; gap:0.65rem; }
+.check-list li { display:flex; align-items:flex-start; gap:0.8rem; font-size:0.88rem; color:var(--ink); line-height:1.55; }
+.check-list li::before {
+  content:''; width:18px; height:18px; min-width:18px; border-radius:50%;
+  background:var(--sage-light); border:1.5px solid var(--sage);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:0.05rem;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%234A6E5A' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2.5 6.5l2.5 2.5 4.5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:center; background-size:11px;
+}
+
+.two-col-list { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2rem; }
+.list-card { background:white; border:1.5px solid var(--sand); border-radius:var(--r-sm); padding:2rem; }
+.list-card h4 { font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--navy); margin-bottom:1.1rem; padding-bottom:0.8rem; border-bottom:1px solid var(--sand); }
+
+.gains-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.55rem; margin-top:1rem; }
+.gain-chip {
+  background:var(--sage-light); border:1px solid #c0d5c8; border-radius:8px;
+  padding:0.65rem 0.9rem; font-size:0.78rem; font-weight:400;
+  color:var(--sage); display:flex; align-items:center; gap:0.4rem; line-height:1.4;
+}
+.gain-chip::before { content:'↑'; font-size:0.65rem; opacity:0.7; }
+
+.svc-cta { text-align:center; margin-top:2.8rem; }
+
+/* ── CTA ── */
+.cta-section {
+  background:var(--navy); padding:8rem 3rem; text-align:center;
+  position:relative; overflow:hidden;
+}
+.cta-section::before {
+  content:''; position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%); width:800px; height:800px; border-radius:50%;
+  background:radial-gradient(circle, rgba(96,53,160,0.22) 0%, transparent 62%); pointer-events:none;
+}
+.cta-inner { position:relative; z-index:1; max-width:620px; margin:0 auto; }
+.cta-section h2 { font-size:clamp(2.2rem,3.5vw,4rem); color:#fff; margin-bottom:1.2rem; }
+.cta-section h2 em { font-style:italic; color:rgba(196,170,240,0.9); }
+.cta-section p { font-size:0.97rem; color:rgba(255,255,255,0.48); margin-bottom:2.8rem; line-height:1.85; }
+.cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+/* ── FOOTER ── */
+.footer-ocf { background:#15232F; border-bottom:1px solid rgba(255,255,255,0.06); padding:2.2rem 3rem; }
+.footer-ocf-inner { max-width:var(--max-w); margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:3rem; }
+.ocf-label { font-size:0.62rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.45rem; display:block; }
+.ocf-text { font-size:0.83rem; color:rgba(255,255,255,0.42); line-height:1.75; font-weight:300; max-width:580px; }
+.ocf-text strong { color:rgba(255,255,255,0.72); font-weight:500; }
+.ocf-logo { height:52px; width:auto; filter:brightness(0) invert(1) opacity(0.65); transition:opacity 0.2s; flex-shrink:0; }
+.ocf-logo:hover { opacity:1; }
+footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
+.footer-grid { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:1.7fr 1fr 1fr; gap:3rem; margin-bottom:2.5rem; }
+.footer-brand-row { display:flex; align-items:center; gap:0.7rem; margin-bottom:1.1rem; }
+.footer-brand-row img { width:36px; height:36px; border-radius:50%; opacity:0.85; }
+.footer-brand-name { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:400; color:#fff; line-height:1.1; }
+.footer-brand-name small { display:block; font-family:'DM Sans',sans-serif; font-size:0.59rem; color:rgba(255,255,255,0.3); letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+.footer-desc { font-size:0.82rem; color:rgba(255,255,255,0.38); line-height:1.75; font-weight:300; max-width:280px; margin-bottom:0.8rem; }
+.footer-addr { font-size:0.76rem; color:rgba(255,255,255,0.25); line-height:1.7; font-weight:300; }
+.footer-col h4 { font-size:0.62rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.25); margin-bottom:1rem; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+.footer-col a { text-decoration:none; font-size:0.82rem; color:rgba(255,255,255,0.4); font-weight:300; transition:color 0.2s; }
+.footer-col a:hover { color:rgba(255,255,255,0.78); }
+.footer-bottom { max-width:var(--max-w); margin:0 auto; border-top:1px solid rgba(255,255,255,0.07); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; font-size:0.73rem; color:rgba(255,255,255,0.25); }
+.social-row { display:flex; gap:0.7rem; }
+.social-btn { width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:0.7rem; font-weight:500; color:rgba(255,255,255,0.38); transition:background 0.2s, color 0.2s; }
+.social-btn:hover { background:rgba(255,255,255,0.15); color:#fff; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:900px) {
+  .nav { padding:0 1.5rem; } .nav-links { display:none; } .burger { display:flex; }
+  .page-header { grid-template-columns:1fr; }
+  .ph-photo { min-height:56vw; }
+  .ph-content { padding:3rem 2rem 3rem; }
+  .svc-tabs { overflow-x:auto; justify-content:flex-start; padding:0 1rem; }
+  .svc-tab { padding:1rem 1.5rem; }
+  .areas-section { padding:5rem 1.5rem; }
+  .areas-grid { grid-template-columns:1fr 1fr; }
+  .svc-section { padding:4.5rem 1.5rem; }
+  .svc-intro-grid { grid-template-columns:1fr; gap:2.5rem; }
+  .svc-intro-grid.rev { direction:ltr; }
+  .two-col-list { grid-template-columns:1fr; }
+  .gains-grid { grid-template-columns:1fr; }
+  .cta-section { padding:5rem 1.5rem; }
+  .footer-ocf { padding:1.5rem; }
+  .footer-ocf-inner { flex-direction:column; gap:1.5rem; }
+  footer { padding:2.5rem 1.5rem 1.5rem; }
+  .footer-grid { grid-template-columns:1fr; gap:2rem; }
+  .footer-bottom { flex-direction:column; gap:1rem; text-align:center; }
+}
+@media (max-width:600px) {
+  .areas-grid { grid-template-columns:1fr; }
+  .gains-grid { grid-template-columns:1fr 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+    <div class="nav-logo-text">Success in Steps<small>Therapy &amp; Counselling</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About Sylvia</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="index.html#clinic">Our Clinic</a></li>
+    <li><a href="our-team.html">Our Team</a></li>
+    <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+  </ul>
+  <button class="burger" id="burgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="mobileNav">
+  <a href="index.html#about">About Sylvia</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#clinic">Our Clinic</a>
+  <a href="our-team.html">Our Team</a>
+  <a href="contact.html" class="nav-cta">Book a Session</a>
+</nav>
+
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-content">
+    <div class="ph-eyebrow">Ottawa · Ontario · In-Person &amp; Virtual</div>
+    <h1>Counselling for every<br><em>stage of your journey</em></h1>
+    <p class="ph-desc">Whether you are navigating a personal challenge, growing through a transition, or seeking support for your family — we are here with care, expertise, and no judgment.</p>
+  </div>
+  <div class="ph-photo">
+    <img src="Branding - WebSize/Success_in_Steps_Branding_115_websize.jpg"
+         alt="A calm and welcoming therapy space at Success in Steps">
+  </div>
+</div>
+
+
+<!-- TAB NAV -->
+<div class="svc-tabs" id="tabNav">
+  <a href="#areas" class="svc-tab active">Areas We Support</a>
+  <a href="#individual" class="svc-tab">Individual Counselling</a>
+  <a href="#parent" class="svc-tab">Parent Counselling</a>
+  <a href="#family" class="svc-tab">Family Counselling</a>
+</div>
+
+
+<!-- AREAS WE SUPPORT -->
+<section id="areas" class="areas-section">
+  <div class="areas-header reveal">
+    <span class="eyebrow eyebrow--purple eyebrow-line" style="justify-content:center;">What We Support</span>
+    <h2>A broad range of concerns,<br>one compassionate team</h2>
+    <p style="margin:0 auto; text-align:center;">No challenge is too small or too complex to bring through our doors.</p>
+  </div>
+  <div class="areas-grid reveal d1">
+    <div class="area-card">
+      <div class="area-icon">🧠</div>
+      <h3>Mental Health &amp; Emotional Well-being</h3>
+      <ul>
+        <li>Anxiety</li><li>Depression</li><li>ADHD &amp; ASD</li>
+        <li>Emotional Regulation</li><li>Stress &amp; Burnout</li><li>Grief &amp; Loss</li>
+      </ul>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">👨‍👩‍👧</div>
+      <h3>Family Dynamics &amp; Parental Guidance</h3>
+      <ul>
+        <li>Parental Stress</li><li>Behavioural Challenges</li>
+        <li>Strained &amp; Ruptured Relationships</li><li>Family Dynamics</li><li>Loneliness</li>
+      </ul>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">💬</div>
+      <h3>Communication &amp; Social Skills</h3>
+      <ul>
+        <li>Interpersonal Skills</li><li>Personal Boundaries</li>
+        <li>Communication Development</li><li>Relationships &amp; Couples</li>
+      </ul>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🌱</div>
+      <h3>Life Transitions &amp; Coping</h3>
+      <ul>
+        <li>Major Life Changes</li><li>Burnout Recovery</li>
+        <li>Building Resilience</li><li>Life Transitions</li>
+      </ul>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">💙</div>
+      <h3>Chronic Conditions &amp; Pain</h3>
+      <ul>
+        <li>Navigating Diagnosis</li><li>Chronic Illness Support</li>
+        <li>Ongoing Health Concerns</li><li>Pain Management</li>
+      </ul>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">✨</div>
+      <h3>Self-Esteem &amp; Identity</h3>
+      <ul>
+        <li>Shame &amp; Guilt</li><li>Low Self-Esteem &amp; Self-Worth</li>
+        <li>Self-Identity</li><li>Trauma &amp; Emotional Processing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- INDIVIDUAL COUNSELLING -->
+<section id="individual" class="svc-section">
+  <div class="svc-section-inner">
+    <div class="svc-intro-grid reveal">
+      <div class="svc-text">
+        <span class="eyebrow eyebrow--sage eyebrow-line">Individual Counselling · Ages 15 &amp; Up</span>
+        <h2>Personalized support<br>for your <em>unique needs</em></h2>
+        <p>Whether you are navigating a specific challenge or simply want to feel and function better, individual therapy provides a dedicated space to focus entirely on you. Sessions are tailored to your concerns, your goals, and your pace.</p>
+        <p>Sylvia provides individual psychotherapy to individuals from 15 years of age through to seniors, across a wide range of concerns and life transitions.</p>
+
+        <div class="approach-block">
+          <h4>Our Approach</h4>
+          <p>There is no one-size-fits-all approach when it comes to supporting your therapeutic goals. You can expect your therapist to draw on a variety of evidence-based approaches — including CBT, ACT, EFFT, Solution-Focused Therapy, Psychodynamic approaches, and behavioural methods — selecting what the research shows works best for your situation.</p>
+        </div>
+
+        <div class="pull-quote" style="margin-top:2rem;">
+          <p>As with any relationship, we all need to feel safe and connected with those we open up with. The therapeutic relationship is central to your counselling journey and your therapeutic gain.</p>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <div class="svc-photo">
+          <img src="Branding - WebSize/Success_in_Steps_Branding_067_websize.jpg" alt="Sylvia Corzato in her Ottawa therapy clinic">
+        </div>
+        <div class="check-label">Areas Commonly Addressed</div>
+        <ul class="check-list">
+          <li>Anxiety, Depression &amp; Emotional Regulation</li>
+          <li>ADHD, ASD &amp; Behavioural Concerns</li>
+          <li>Grief, Loss &amp; Life Transitions</li>
+          <li>Burnout &amp; Stress Management</li>
+          <li>Self-Esteem, Shame &amp; Self-Identity</li>
+          <li>Interpersonal &amp; Communication Skills</li>
+          <li>Chronic Illness &amp; Health Concerns</li>
+          <li>Ruptured Relationships &amp; Loneliness</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pull-quote reveal">
+      <p>"Life is a journey, not a destination. It is an honour to be by your side along the way."</p>
+      <cite>— Sylvia Corzato, RP, MACP</cite>
+    </div>
+    <div class="svc-cta reveal">
+      <a href="contact.html" class="btn btn-purple">Book Individual Counselling</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- PARENT COUNSELLING -->
+<section id="parent" class="svc-section">
+  <div class="svc-section-inner">
+    <div class="svc-intro-grid rev reveal">
+      <div class="svc-text">
+        <span class="eyebrow eyebrow--gold eyebrow-line">Parent Counselling</span>
+        <h2>Parenting does not come<br>with a manual — <em>and that's okay</em></h2>
+        <p>Parenting is one of the most important roles we can embrace in life. Yet there is no reliable handbook for navigating its ups and downs. How we parent is shaped by our values, beliefs, cultural influences, personal strengths, and the individual needs of our children.</p>
+        <p>Parent counselling supports you in expanding your "toolbox" with knowledge, guidance, and strategies that align with your own parenting values. Together, we explore how to move from feeling overwhelmed and burnt out to feeling comfortable, confident, and capable.</p>
+        <p>Support is available individually or as a couple.</p>
+
+        <div class="approach-block" style="background:var(--gold-light); border-color:#ddc9a0;">
+          <h4>A Personal Note from Sylvia</h4>
+          <p>As a parent myself, I know how important it is to feel confident and comfortable with how you choose to parent. In our sessions, you can expect to feel supported as we explore your challenges and discover new strategies together — without bias or judgment.</p>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <div class="svc-photo">
+          <img src="Branding - WebSize/Success_in_Steps_Branding_025_websize.jpg" alt="Sylvia Corzato at her desk in the Ottawa clinic">
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col-list reveal">
+      <div class="list-card">
+        <h4>What to Expect in Sessions</h4>
+        <ul class="check-list">
+          <li>Explore parenting values, beliefs, and family dynamics</li>
+          <li>Develop insight into current challenges and concerns</li>
+          <li>Identify personal and family goals</li>
+          <li>Establish appropriate expectations and boundaries</li>
+          <li>Understand the causes of behaviours and your role within them</li>
+          <li>Improve understanding of triggers and preventative measures</li>
+          <li>Learn how to connect, validate, and redirect effectively</li>
+          <li>Receive psychoeducation on the functions of behaviour</li>
+        </ul>
+      </div>
+      <div class="list-card">
+        <h4>Common Therapeutic Gains</h4>
+        <div class="gains-grid">
+          <div class="gain-chip">Improved parent-child relationship</div>
+          <div class="gain-chip">Better communication and understanding</div>
+          <div class="gain-chip">Rebuilt trust and connection</div>
+          <div class="gain-chip">Greater knowledge of mental health</div>
+          <div class="gain-chip">Support for healthy life changes</div>
+          <div class="gain-chip">Increased emotional regulation</div>
+          <div class="gain-chip">Family members feel valued and respected</div>
+          <div class="gain-chip">Increased confidence and self-identity</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote reveal" style="margin-top:2.5rem;">
+      <p>"Parenting is a journey, not a destination. It is an honour to be by your side along the way."</p>
+      <cite>— Sylvia Corzato, RP, MACP</cite>
+    </div>
+    <div class="svc-cta reveal">
+      <a href="contact.html" class="btn btn-purple">Book Parent Counselling</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAMILY COUNSELLING -->
+<section id="family" class="svc-section">
+  <div class="svc-section-inner">
+    <div class="svc-intro-grid reveal">
+      <div class="svc-text">
+        <span class="eyebrow eyebrow--purple eyebrow-line">Family Counselling</span>
+        <h2>Supporting the whole family,<br><em>together</em></h2>
+        <p>Family dynamics are complex, and the challenges one member faces ripple through everyone. Family counselling creates a shared space where all voices are heard and each person is valued.</p>
+        <p>Whether you are navigating communication breakdowns, rebuilding connection after conflict, supporting a child through difficulty, or adjusting to a significant life change — family therapy helps the whole unit find a path forward together.</p>
+        <p>Sessions are grounded in evidence-based practice and designed to meet your family where it is, not where it is expected to be.</p>
+
+        <div class="approach-block">
+          <h4>What We Work Towards</h4>
+          <p>Improved communication, rebuilt trust, and a stronger sense of connection are at the heart of family counselling. Each session is collaborative, respectful, and tailored to the values and needs of your unique family unit.</p>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <div class="svc-photo">
+          <img src="Branding - WebSize/Success_in_Steps_Branding_009_websize.jpg" alt="Welcoming waiting room at Success in Steps Ottawa">
+        </div>
+        <div class="check-label">Areas Commonly Addressed</div>
+        <ul class="check-list">
+          <li>Communication breakdowns and conflict</li>
+          <li>Behavioural challenges in children and teens</li>
+          <li>Ruptured or strained family relationships</li>
+          <li>Life transitions affecting the family unit</li>
+          <li>Parenting differences and co-parenting support</li>
+          <li>Supporting a family member with mental health concerns</li>
+          <li>Grief, loss, and navigating difficult diagnoses together</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="svc-cta reveal">
+      <a href="contact.html" class="btn btn-purple">Book Family Counselling</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="eyebrow eyebrow--faint eyebrow-line" style="justify-content:center;">Take the First Step</span>
+    <h2>You don't have to<br>navigate this <em>alone</em></h2>
+    <p>Whether you are ready to book or just want to learn more — we are here. Reach out and let's find the right fit for you.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-white">Book a Consultation</a>
+      <a href="our-team.html" class="btn btn-outline-white">Meet Our Team</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<div class="footer-ocf">
+  <div class="footer-ocf-inner">
+    <div>
+      <span class="ocf-label">In Collaboration With</span>
+      <p class="ocf-text">Sylvia Corzato is a proud counselling provider with the <strong>Ottawa Cancer Foundation</strong>, offering psychotherapy support as part of their mental health programs for individuals and families affected by cancer.</p>
+    </div>
+    <img class="ocf-logo" src="https://successinsteps.ca/wp-content/uploads/elementor/thumbs/20240527141414_ocf_logo_eng_colour_rgb-r352ad9nhcfo9lrd6u8r734r4nv5w7jf971kjtxu68.png" alt="Ottawa Cancer Foundation">
+  </div>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-row">
+        <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+        <div class="footer-brand-name">Success in Steps<small>Therapy &amp; Counselling</small></div>
+      </div>
+      <p class="footer-desc">Compassionate psychotherapy and counselling in Ottawa, Ontario. Serving individuals and families since 2016.</p>
+      <p class="footer-addr">111 Colonnade Road North, Suite 201<br>Ottawa, Ontario K2E 7M3</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html#about">About Sylvia</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="join-our-team.html">Join Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#individual">Individual Counselling (15+)</a></li>
+        <li><a href="services.html#parent">Parent Counselling</a></li>
+        <li><a href="services.html#family">Family Counselling</a></li>
+        <li><a href="contact.html">Book a Session</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Success in Steps. All rights reserved.</span>
+    <div class="social-row">
+      <a href="https://www.facebook.com/successinsteps" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      <a href="https://www.linkedin.com/in/sylvia-corzato-successinsteps/" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://www.instagram.com/success.in.steps.clinic" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* Nav */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive:true });
+
+/* Burger */
+const burger = document.getElementById('burgerBtn');
+const mob = document.getElementById('mobileNav');
+burger.addEventListener('click', () => {
+  const o = burger.classList.toggle('open');
+  mob.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open'); mob.classList.remove('open'); document.body.style.overflow = '';
+}));
+
+/* Scroll reveal */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold:0.08, rootMargin:'0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* Tab highlighting */
+const tabs = document.querySelectorAll('.svc-tab');
+const sections = ['areas','individual','parent','family'].map(id => document.getElementById(id));
+const offset = (document.getElementById('tabNav')?.offsetHeight || 48) + 80;
+window.addEventListener('scroll', () => {
+  let cur = 0;
+  sections.forEach((s, i) => { if (s && scrollY >= s.offsetTop - offset - 10) cur = i; });
+  tabs.forEach((t, i) => t.classList.toggle('active', i === cur));
+}, { passive:true });
+</script>
+</body>
+</html>

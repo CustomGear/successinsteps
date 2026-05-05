@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Book — Success in Steps Therapy &amp; Counselling | Ottawa</title>
+<meta name="description" content="Reach out to Success in Steps in Ottawa. Book a free 15-minute consultation with Sylvia Corzato, RP, MACP or one of our associate clinicians. In-person and virtual sessions available.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --purple:#6035A0; --purple-mid:#7A4BB5; --purple-deep:#29165A;
+  --purple-light:#EDE6F7; --purple-pale:#F7F3FD;
+  --navy:#1C3450; --navy-mid:#243D5E; --navy-dark:#131D2E;
+  --cream:#F8F5F0; --warm-white:#FDFCFB; --sand:#E6DDD1;
+  --taupe:#BEB2A3; --stone:#867D74; --sage:#4A6E5A; --sage-light:#DDE8E2;
+  --gold:#9E7638; --gold-light:#EEE4D2; --ink:#1A1A1A; --muted:#65605A;
+  --nav-h:72px; --max-w:1160px; --r:16px; --r-sm:10px; --r-pill:100px;
+  --ease:cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { font-family:'DM Sans',sans-serif; background:var(--warm-white); color:var(--ink); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+img { display:block; max-width:100%; }
+a { color:inherit; }
+h1,h2,h3,h4 { font-family:'Cormorant Garamond',serif; font-weight:300; line-height:1.1; letter-spacing:-0.025em; }
+p { line-height:1.85; font-weight:300; color:var(--muted); }
+.eyebrow { font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:500; letter-spacing:0.24em; text-transform:uppercase; display:block; margin-bottom:1rem; }
+.eyebrow-line { display:inline-flex; align-items:center; gap:0.6rem; }
+.eyebrow-line::before { content:''; display:block; width:24px; height:1.5px; background:currentColor; opacity:0.55; flex-shrink:0; }
+.eyebrow--purple { color:var(--purple); } .eyebrow--sage { color:var(--sage); }
+.eyebrow--gold { color:var(--gold); } .eyebrow--faint { color:rgba(255,255,255,0.45); }
+.eyebrow--stone { color:var(--stone); }
+.reveal { opacity:0; transform:translateY(24px); transition:opacity 0.75s var(--ease), transform 0.75s var(--ease); }
+.reveal.in { opacity:1; transform:none; }
+.d1 { transition-delay:0.08s; } .d2 { transition-delay:0.18s; } .d3 { transition-delay:0.3s; }
+.btn { display:inline-flex; align-items:center; gap:0.45rem; text-decoration:none; font-family:'DM Sans',sans-serif; font-size:0.84rem; font-weight:500; letter-spacing:0.01em; padding:0.85rem 1.8rem; border-radius:var(--r-pill); border:none; cursor:pointer; transition:all 0.35s var(--ease); }
+.btn-purple { background:var(--purple); color:#fff; }
+.btn-purple:hover { background:var(--purple-mid); transform:translateY(-2px); box-shadow:0 10px 28px rgba(96,53,160,0.28); }
+.btn-white { background:#fff; color:var(--navy); box-shadow:0 4px 20px rgba(0,0,0,0.1); }
+.btn-white:hover { transform:translateY(-2px); box-shadow:0 10px 32px rgba(0,0,0,0.15); }
+.btn-outline-white { background:transparent; color:rgba(255,255,255,0.82); border:1.5px solid rgba(255,255,255,0.28); }
+.btn-outline-white:hover { border-color:rgba(255,255,255,0.65); color:#fff; transform:translateY(-2px); }
+
+/* ── NAV ── */
+.nav { position:fixed; top:0; left:0; right:0; z-index:1000; height:var(--nav-h); display:flex; align-items:center; justify-content:space-between; padding:0 3rem; background:rgba(253,252,251,0.96); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:0 1px 0 var(--sand); }
+.nav-logo { display:flex; align-items:center; gap:0.7rem; text-decoration:none; flex-shrink:0; }
+.nav-logo img { width:56px; height:56px; border-radius:50%; object-fit:cover; }
+.nav-logo-text { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--ink); line-height:1.1; }
+.nav-logo-text small { display:block; font-family:'DM Sans',sans-serif; font-size:0.6rem; font-weight:400; color:var(--stone); letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+.nav-links { list-style:none; display:flex; align-items:center; gap:2.2rem; }
+.nav-links a { text-decoration:none; font-size:0.84rem; font-weight:400; color:var(--stone); transition:color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--ink); }
+.nav-cta { background:var(--purple) !important; color:#fff !important; font-size:0.8rem !important; padding:0.58rem 1.35rem; border-radius:var(--r-pill); transition:all 0.3s var(--ease) !important; }
+.nav-cta:hover { background:var(--purple-mid) !important; transform:translateY(-1px); }
+.burger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.burger span { display:block; width:22px; height:1.5px; background:var(--ink); border-radius:2px; transition:all 0.35s var(--ease); }
+.burger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity:0; }
+.burger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+.nav-mobile { position:fixed; top:var(--nav-h); left:0; right:0; z-index:999; background:rgba(253,252,251,0.97); backdrop-filter:blur(16px); padding:1.2rem 2rem 2rem; border-bottom:1px solid var(--sand); display:none; flex-direction:column; opacity:0; transform:translateY(-8px); transition:opacity 0.28s ease, transform 0.28s ease; }
+.nav-mobile.open { display:flex; opacity:1; transform:none; }
+.nav-mobile a { text-decoration:none; font-size:1rem; font-weight:400; color:var(--ink); padding:0.9rem 0; border-bottom:1px solid var(--sand); }
+.nav-mobile a:last-child { border:none; margin-top:0.8rem; }
+.nav-mobile .nav-cta { text-align:center; justify-content:center; padding:0.85rem; border-radius:var(--r-sm); }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding-top:var(--nav-h);
+  background:var(--purple-deep);
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  min-height:440px;
+  overflow:hidden;
+}
+.ph-content {
+  display:flex; flex-direction:column; justify-content:center;
+  padding:5rem 3.5rem 5rem 6rem;
+}
+.ph-eyebrow {
+  font-size:0.63rem; font-weight:500; letter-spacing:0.26em;
+  text-transform:uppercase; color:rgba(255,255,255,0.45);
+  display:flex; align-items:center; gap:0.6rem;
+  margin-bottom:1.8rem;
+  opacity:0; animation:fadeUp 0.7s 0.1s var(--ease) both;
+}
+.ph-eyebrow::before { content:''; width:24px; height:1.5px; background:rgba(255,255,255,0.28); flex-shrink:0; }
+.ph-content h1 {
+  font-size:clamp(2.4rem,3.8vw,4.4rem); font-weight:300; color:#fff;
+  line-height:1.06; letter-spacing:-0.03em; margin-bottom:1.3rem;
+  opacity:0; animation:fadeUp 0.7s 0.22s var(--ease) both;
+}
+.ph-content h1 em { font-style:italic; color:rgba(200,175,245,0.9); }
+.ph-desc {
+  font-size:0.95rem; line-height:1.85; color:rgba(255,255,255,0.5);
+  font-weight:300; max-width:400px;
+  opacity:0; animation:fadeUp 0.7s 0.36s var(--ease) both;
+}
+.ph-photo { overflow:hidden; }
+.ph-photo img { width:100%; height:100%; object-fit:cover; object-position:center 15%; animation:softZoom 20s ease-out forwards; }
+
+@keyframes softZoom { from{transform:scale(1.05)} to{transform:scale(1)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+
+/* ── CONTACT SECTION ── */
+.contact-section {
+  padding:7rem 3rem;
+  background:var(--warm-white);
+}
+.contact-inner {
+  max-width:var(--max-w); margin:0 auto;
+  display:grid; grid-template-columns:1.15fr 1fr;
+  gap:5rem; align-items:start;
+}
+
+/* ── FORM ── */
+.contact-form-wrap {
+  background:#fff;
+  border:1.5px solid var(--sand);
+  border-radius:var(--r);
+  padding:2.8rem 3rem;
+}
+.contact-form-wrap h2 {
+  font-size:clamp(1.8rem,2.5vw,2.6rem);
+  color:var(--navy); margin-bottom:0.6rem;
+}
+.contact-form-wrap h2 em { font-style:italic; color:var(--purple); }
+.form-intro { font-size:0.88rem; color:var(--stone); margin-bottom:2.2rem; line-height:1.75; }
+
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.form-group { display:flex; flex-direction:column; gap:0.4rem; margin-bottom:1rem; }
+.form-group label {
+  font-size:0.72rem; font-weight:500; letter-spacing:0.08em;
+  text-transform:uppercase; color:var(--stone);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family:'DM Sans',sans-serif;
+  font-size:0.92rem; font-weight:300; color:var(--ink);
+  background:var(--warm-white);
+  border:1.5px solid var(--sand);
+  border-radius:var(--r-sm);
+  padding:0.75rem 1rem;
+  outline:none;
+  transition:border-color 0.2s, box-shadow 0.2s;
+  width:100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color:var(--purple);
+  box-shadow:0 0 0 3px rgba(96,53,160,0.1);
+  background:#fff;
+}
+.form-group select { appearance:none; cursor:pointer; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23867D74' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.5rem; }
+.form-group textarea { resize:vertical; min-height:130px; }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color:var(--taupe); }
+
+.form-privacy {
+  display:flex; align-items:flex-start; gap:0.7rem;
+  margin:1.4rem 0 1.8rem; font-size:0.8rem; color:var(--stone); line-height:1.6;
+}
+.form-privacy input[type="checkbox"] {
+  width:16px; height:16px; flex-shrink:0;
+  accent-color:var(--purple); margin-top:2px;
+  cursor:pointer;
+}
+.form-privacy a { color:var(--purple); text-decoration:underline; text-underline-offset:2px; }
+.form-submit { width:100%; justify-content:center; font-size:0.9rem; padding:1rem 2rem; }
+.form-note {
+  text-align:center; font-size:0.74rem; color:var(--taupe);
+  margin-top:1rem; line-height:1.6;
+}
+
+/* ── INFO PANEL ── */
+.contact-info { display:flex; flex-direction:column; gap:1.4rem; }
+.info-card {
+  background:var(--cream);
+  border:1px solid var(--sand);
+  border-radius:var(--r-sm);
+  padding:1.5rem 1.6rem;
+  display:flex; align-items:flex-start; gap:1.1rem;
+  transition:box-shadow 0.2s, transform 0.2s;
+}
+.info-card:hover { box-shadow:0 4px 20px rgba(0,0,0,0.06); transform:translateY(-2px); }
+.info-icon {
+  width:42px; height:42px; border-radius:10px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+}
+.info-icon.purple { background:var(--purple-light); }
+.info-icon.sage   { background:var(--sage-light); }
+.info-icon.gold   { background:var(--gold-light); }
+.info-icon svg { width:20px; height:20px; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+.info-icon.purple svg { stroke:var(--purple); }
+.info-icon.sage   svg { stroke:var(--sage); }
+.info-icon.gold   svg { stroke:var(--gold); }
+.info-label {
+  font-size:0.64rem; font-weight:500; letter-spacing:0.2em;
+  text-transform:uppercase; color:var(--taupe); margin-bottom:0.35rem;
+}
+.info-val {
+  font-size:0.9rem; color:var(--navy); font-weight:400; line-height:1.55;
+}
+.info-val a { text-decoration:none; color:var(--navy); transition:color 0.2s; }
+.info-val a:hover { color:var(--purple); }
+.info-sub { font-size:0.78rem; color:var(--stone); font-weight:300; margin-top:0.2rem; }
+
+.hours-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.25rem 1.5rem; margin-top:0.2rem; }
+.hours-row { display:flex; justify-content:space-between; font-size:0.82rem; padding:0.18rem 0; }
+.hours-day { color:var(--stone); font-weight:300; }
+.hours-time { color:var(--navy); font-weight:400; }
+
+.response-badge {
+  background:var(--purple-pale);
+  border:1px solid var(--purple-light);
+  border-radius:var(--r-sm);
+  padding:1.1rem 1.4rem;
+  display:flex; align-items:center; gap:0.85rem;
+}
+.response-badge-icon {
+  font-size:1.2rem; flex-shrink:0;
+}
+.response-badge-text { font-size:0.82rem; color:var(--purple); line-height:1.55; }
+.response-badge-text strong { display:block; font-weight:600; margin-bottom:2px; }
+
+/* ── STEPS SECTION ── */
+.steps-section {
+  background:var(--cream);
+  padding:7rem 3rem;
+  border-top:1px solid var(--sand);
+}
+.steps-inner { max-width:var(--max-w); margin:0 auto; }
+.steps-header { text-align:center; margin-bottom:4rem; }
+.steps-header h2 { font-size:clamp(2rem,2.8vw,3rem); color:var(--navy); margin-bottom:0.6rem; }
+.steps-header h2 em { font-style:italic; color:var(--purple); }
+.steps-header p { font-size:0.92rem; color:var(--stone); max-width:500px; margin:0 auto; }
+
+.steps-grid {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:1.5rem; position:relative;
+}
+.steps-grid::before {
+  content:'';
+  position:absolute;
+  top:28px; left:calc(12.5% + 1.5rem); right:calc(12.5% + 1.5rem);
+  height:1px; background:var(--sand);
+  z-index:0;
+}
+.step-card {
+  background:#fff; border:1px solid var(--sand);
+  border-radius:var(--r); padding:2rem 1.6rem;
+  text-align:center; position:relative; z-index:1;
+  transition:box-shadow 0.3s, transform 0.3s;
+}
+.step-card:hover { box-shadow:0 8px 32px rgba(0,0,0,0.08); transform:translateY(-3px); }
+.step-num {
+  width:48px; height:48px; border-radius:50%;
+  background:var(--purple-pale); border:1.5px solid var(--purple-light);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:300;
+  color:var(--purple); margin:0 auto 1.3rem; position:relative; z-index:1;
+}
+.step-card h3 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem; font-weight:400; color:var(--navy);
+  margin-bottom:0.5rem;
+}
+.step-card p { font-size:0.82rem; color:var(--stone); line-height:1.7; }
+
+/* ── FAQ ── */
+.faq-section {
+  background:var(--warm-white);
+  padding:7rem 3rem;
+  border-top:1px solid var(--sand);
+}
+.faq-inner {
+  max-width:820px; margin:0 auto;
+}
+.faq-header { margin-bottom:3rem; }
+.faq-header h2 { font-size:clamp(2rem,2.8vw,3rem); color:var(--navy); margin-bottom:0.6rem; }
+.faq-header h2 em { font-style:italic; color:var(--purple); }
+.faq-header p { font-size:0.92rem; color:var(--stone); }
+
+.faq-item {
+  border-bottom:1px solid var(--sand);
+}
+.faq-item:first-of-type { border-top:1px solid var(--sand); }
+.faq-q {
+  width:100%; background:none; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:1.4rem 0; text-align:left;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem; font-weight:400; color:var(--navy);
+  transition:color 0.2s;
+}
+.faq-q:hover { color:var(--purple); }
+.faq-chevron {
+  flex-shrink:0; width:20px; height:20px;
+  display:flex; align-items:center; justify-content:center;
+  transition:transform 0.3s var(--ease);
+  color:var(--taupe);
+}
+.faq-q[aria-expanded="true"] .faq-chevron { transform:rotate(180deg); color:var(--purple); }
+.faq-q[aria-expanded="true"] { color:var(--purple); }
+.faq-a {
+  overflow:hidden; max-height:0; transition:max-height 0.35s var(--ease), padding 0.25s ease;
+}
+.faq-a.open { max-height:300px; }
+.faq-a-inner { font-size:0.9rem; color:var(--stone); line-height:1.85; padding-bottom:1.5rem; font-weight:300; }
+.faq-a-inner a { color:var(--purple); text-decoration:underline; text-underline-offset:2px; }
+
+/* ── MAP/LOCATION ── */
+.location-section {
+  background:var(--cream);
+  padding:7rem 3rem;
+  border-top:1px solid var(--sand);
+}
+.location-inner {
+  max-width:var(--max-w); margin:0 auto;
+  display:grid; grid-template-columns:1fr 1.4fr;
+  gap:5rem; align-items:center;
+}
+.location-content h2 { font-size:clamp(1.8rem,2.5vw,2.8rem); color:var(--navy); margin-bottom:1rem; }
+.location-content h2 em { font-style:italic; color:var(--purple); }
+.location-content p { font-size:0.92rem; max-width:380px; margin-bottom:2rem; }
+.location-details { display:flex; flex-direction:column; gap:1rem; margin-bottom:2rem; }
+.loc-row { display:flex; align-items:flex-start; gap:0.85rem; }
+.loc-dot {
+  width:8px; height:8px; border-radius:50%;
+  background:var(--purple); flex-shrink:0; margin-top:0.6rem;
+}
+.loc-text { font-size:0.88rem; color:var(--stone); line-height:1.7; }
+.loc-text strong { display:block; color:var(--navy); font-weight:500; margin-bottom:0.1rem; }
+
+.map-frame {
+  border-radius:var(--r);
+  overflow:hidden;
+  aspect-ratio:4/3;
+  border:1.5px solid var(--sand);
+  box-shadow:0 12px 48px rgba(0,0,0,0.1);
+  background:var(--sand);
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+}
+.map-placeholder {
+  text-align:center; padding:2rem;
+}
+.map-placeholder svg {
+  width:48px; height:48px; stroke:var(--taupe);
+  stroke-width:1.5; fill:none; margin:0 auto 1rem;
+  stroke-linecap:round; stroke-linejoin:round;
+}
+.map-placeholder p { font-size:0.88rem; color:var(--stone); margin-bottom:1.2rem; }
+.map-link {
+  display:inline-flex; align-items:center; gap:0.45rem;
+  font-size:0.8rem; font-weight:500; color:var(--purple);
+  text-decoration:none; border-bottom:1.5px solid var(--purple-light);
+  padding-bottom:0.1rem; transition:gap 0.2s, border-color 0.2s;
+}
+.map-link:hover { gap:0.75rem; border-color:var(--purple); }
+
+/* ── CTA ── */
+.cta-section {
+  background:var(--navy);
+  padding:8rem 3rem; text-align:center;
+  position:relative; overflow:hidden;
+}
+.cta-section::before {
+  content:''; position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:800px; height:800px; border-radius:50%;
+  background:radial-gradient(circle, rgba(96,53,160,0.22) 0%, transparent 62%);
+  pointer-events:none;
+}
+.cta-inner { position:relative; z-index:1; max-width:620px; margin:0 auto; }
+.cta-section h2 { font-size:clamp(2.2rem,3.5vw,4rem); color:#fff; margin-bottom:1.2rem; }
+.cta-section h2 em { font-style:italic; color:rgba(196,170,240,0.9); }
+.cta-section p { font-size:0.97rem; color:rgba(255,255,255,0.48); margin-bottom:2.8rem; line-height:1.85; }
+.cta-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+/* ── FOOTER ── */
+.footer-ocf {
+  background:#15232F; border-bottom:1px solid rgba(255,255,255,0.06); padding:2.2rem 3rem;
+}
+.footer-ocf-inner {
+  max-width:var(--max-w); margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between; gap:3rem;
+}
+.ocf-label { font-size:0.62rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.45rem; display:block; }
+.ocf-text { font-size:0.83rem; color:rgba(255,255,255,0.42); line-height:1.75; font-weight:300; max-width:580px; }
+.ocf-text strong { color:rgba(255,255,255,0.72); font-weight:500; }
+.ocf-logo { height:52px; width:auto; filter:brightness(0) invert(1) opacity(0.65); transition:opacity 0.2s; flex-shrink:0; }
+.ocf-logo:hover { opacity:1; }
+footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
+.footer-grid {
+  max-width:var(--max-w); margin:0 auto;
+  display:grid; grid-template-columns:1.7fr 1fr 1fr;
+  gap:3rem; margin-bottom:2.5rem;
+}
+.footer-brand-row { display:flex; align-items:center; gap:0.7rem; margin-bottom:1.1rem; }
+.footer-brand-row img { width:36px; height:36px; border-radius:50%; opacity:0.85; }
+.footer-brand-name { font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:400; color:#fff; line-height:1.1; }
+.footer-brand-name small { display:block; font-family:'DM Sans',sans-serif; font-size:0.59rem; color:rgba(255,255,255,0.3); letter-spacing:0.14em; text-transform:uppercase; margin-top:2px; }
+.footer-desc { font-size:0.82rem; color:rgba(255,255,255,0.38); line-height:1.75; font-weight:300; max-width:280px; margin-bottom:0.8rem; }
+.footer-addr { font-size:0.76rem; color:rgba(255,255,255,0.25); line-height:1.7; font-weight:300; }
+.footer-col h4 { font-size:0.62rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.25); margin-bottom:1rem; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+.footer-col a { text-decoration:none; font-size:0.82rem; color:rgba(255,255,255,0.4); font-weight:300; transition:color 0.2s; }
+.footer-col a:hover { color:rgba(255,255,255,0.78); }
+.footer-bottom {
+  max-width:var(--max-w); margin:0 auto;
+  border-top:1px solid rgba(255,255,255,0.07); padding-top:1.5rem;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:0.73rem; color:rgba(255,255,255,0.25);
+}
+.social-row { display:flex; gap:0.7rem; }
+.social-btn {
+  width:32px; height:32px; border-radius:50%;
+  background:rgba(255,255,255,0.07);
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; font-size:0.7rem; font-weight:500;
+  color:rgba(255,255,255,0.38); transition:background 0.2s, color 0.2s;
+}
+.social-btn:hover { background:rgba(255,255,255,0.15); color:#fff; }
+
+/* ── RESPONSIVE ── */
+@media (max-width:1024px) {
+  .steps-grid { grid-template-columns:1fr 1fr; }
+  .steps-grid::before { display:none; }
+}
+@media (max-width:900px) {
+  .nav { padding:0 1.5rem; }
+  .nav-links { display:none; }
+  .burger { display:flex; }
+  .page-header { grid-template-columns:1fr; }
+  .ph-photo { display:none; }
+  .ph-content { padding:4rem 2rem 4rem 2rem; }
+  .contact-inner { grid-template-columns:1fr; gap:2.5rem; }
+  .contact-form-wrap { padding:2rem 1.5rem; }
+  .location-inner { grid-template-columns:1fr; gap:2.5rem; }
+  .footer-ocf { padding:1.5rem; }
+  .footer-ocf-inner { flex-direction:column; gap:1.5rem; }
+  footer { padding:2.5rem 1.5rem 1.5rem; }
+  .footer-grid { grid-template-columns:1fr; gap:2rem; }
+  .footer-bottom { flex-direction:column; gap:1rem; text-align:center; }
+  .contact-section, .steps-section, .faq-section, .location-section, .cta-section { padding:5rem 1.5rem; }
+}
+@media (max-width:600px) {
+  .form-row { grid-template-columns:1fr; }
+  .steps-grid { grid-template-columns:1fr; }
+  .hours-grid { grid-template-columns:1fr; }
+  .cta-btns { flex-direction:column; }
+  .cta-btns .btn { justify-content:center; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+    <div class="nav-logo-text">
+      Success in Steps
+      <small>Therapy &amp; Counselling</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About Sylvia</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#clinic">Our Clinic</a></li>
+    <li><a href="our-team.html">Our Team</a></li>
+    <li><a href="contact.html" class="nav-cta active">Book a Session</a></li>
+  </ul>
+  <button class="burger" id="burgerBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-mobile" id="mobileNav">
+  <a href="index.html#about">About Sylvia</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#clinic">Our Clinic</a>
+  <a href="our-team.html">Our Team</a>
+  <a href="contact.html" class="nav-cta">Book a Session</a>
+</nav>
+
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="ph-content">
+    <div class="ph-eyebrow">Reach Out &nbsp;·&nbsp; Ottawa, Ontario</div>
+    <h1>Let's take the<br><em>first step,</em> together</h1>
+    <p class="ph-desc">We respond to all inquiries within one business day. A free 15-minute phone consultation is available to help find the right fit.</p>
+  </div>
+  <div class="ph-photo">
+    <img src="Branding - WebSize/Success_in_Steps_Branding_025_websize.jpg"
+         alt="Sylvia Corzato at her desk at Success in Steps Ottawa">
+  </div>
+</header>
+
+
+<!-- CONTACT FORM + INFO -->
+<section class="contact-section">
+  <div class="contact-inner">
+
+    <!-- FORM -->
+    <div class="contact-form-wrap reveal">
+      <span class="eyebrow eyebrow--purple eyebrow-line">Send a Message</span>
+      <h2>Get in <em>touch</em></h2>
+      <p class="form-intro">Fill out the form below and we'll be in touch within one business day. Prefer to call? Reach us directly at <a href="tel:+16134215040" style="color:var(--purple);text-decoration:underline;text-underline-offset:2px;">(613) 421-5040</a>.</p>
+
+      <form action="mailto:info@successinsteps.ca" method="POST" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name <span style="color:var(--purple)">*</span></label>
+            <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name <span style="color:var(--purple)">*</span></label>
+            <input type="text" id="last-name" name="last_name" placeholder="Your last name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address <span style="color:var(--purple)">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(613) 000-0000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">What brings you here? <span style="color:var(--purple)">*</span></label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Please select a service area</option>
+            <option value="individual">Individual Counselling (15+)</option>
+            <option value="parent">Parent Counselling</option>
+            <option value="family">Family Counselling</option>
+            <option value="consult">Free 15-min Consultation</option>
+            <option value="other">Other / Not Sure Yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="format">Preferred Session Format</label>
+          <select id="format" name="format">
+            <option value="" disabled selected>In-person, virtual, or no preference</option>
+            <option value="in-person">In-Person — Ottawa Clinic</option>
+            <option value="virtual">Virtual (Ontario-wide)</option>
+            <option value="no-preference">No Preference</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell us a little about what you're looking for</label>
+          <textarea id="message" name="message" placeholder="Share as much or as little as feels comfortable. There's no right answer here."></textarea>
+        </div>
+
+        <div class="form-privacy">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">I understand that this form is not a crisis line. In a mental health emergency, please call <strong>9-1-1</strong> or <strong>1-866-996-0991</strong> (Ottawa Crisis Line). I agree to the <a href="#">Privacy Policy</a>.</label>
+        </div>
+
+        <button type="submit" class="btn btn-purple form-submit">Send My Message &nbsp;→</button>
+        <p class="form-note">We typically respond within one business day. All information is kept strictly confidential.</p>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info reveal d2">
+
+      <div class="response-badge">
+        <div class="response-badge-icon">💜</div>
+        <div class="response-badge-text">
+          <strong>Free 15-Minute Consultation</strong>
+          Not sure if we're the right fit? A no-obligation call costs nothing — and it could change everything.
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon purple">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Our Clinic</div>
+          <div class="info-val">111 Colonnade Road North, Suite 201<br>Ottawa, Ontario K2E 7M3</div>
+          <div class="info-sub">Free parking available in the building lot</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon sage">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.13v2.79z"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Phone</div>
+          <div class="info-val"><a href="tel:+16134215040">(613) 421-5040</a></div>
+          <div class="info-sub">Leave a voicemail anytime — we check daily</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon purple">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Email</div>
+          <div class="info-val"><a href="mailto:info@successinsteps.ca">info@successinsteps.ca</a></div>
+          <div class="info-sub">We reply within one business day</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon gold">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Clinic Hours</div>
+          <div class="hours-grid">
+            <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">9am – 7pm</span></div>
+            <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time">9am – 7pm</span></div>
+            <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">9am – 7pm</span></div>
+            <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">9am – 7pm</span></div>
+            <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">9am – 5pm</span></div>
+            <div class="hours-row"><span class="hours-day">Weekend</span><span class="hours-time">By request</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="steps-section">
+  <div class="steps-inner">
+    <div class="steps-header reveal">
+      <span class="eyebrow eyebrow--sage eyebrow-line" style="justify-content:center;">Getting Started</span>
+      <h2>What to <em>expect</em></h2>
+      <p>We've made reaching out as simple and pressure-free as possible. Here's how it works.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3>Reach Out</h3>
+        <p>Send us a message or give us a call. There's no commitment — just a first hello.</p>
+      </div>
+      <div class="step-card reveal d1">
+        <div class="step-num">2</div>
+        <h3>Free Consult</h3>
+        <p>A 15-minute call to talk through what you're looking for and see if we're the right fit.</p>
+      </div>
+      <div class="step-card reveal d2">
+        <div class="step-num">3</div>
+        <h3>Book Your First Session</h3>
+        <p>We'll match you with the right clinician and schedule a time that works for you.</p>
+      </div>
+      <div class="step-card reveal d3">
+        <div class="step-num">4</div>
+        <h3>Begin Your Journey</h3>
+        <p>Show up as you are. Everything from here is built around you, at your pace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-header reveal">
+      <span class="eyebrow eyebrow--purple eyebrow-line">Common Questions</span>
+      <h2>Before you <em>reach out</em></h2>
+      <p>A few answers to questions we hear often.</p>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Do you offer a free consultation?
+        <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5.5l5 5 5-5"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p class="faq-a-inner">Yes — we offer a complimentary 15-minute phone consultation for all new clients. This is a no-pressure conversation to help us understand what you're looking for and make sure we're the right fit before you commit to a session.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Do you offer virtual / online sessions?
+        <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5.5l5 5 5-5"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p class="faq-a-inner">Absolutely. We offer secure video sessions to clients anywhere in Ontario. Many clients appreciate the flexibility and privacy of virtual therapy — it's just as effective as in-person for most concerns.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Is therapy covered by insurance?
+        <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5.5l5 5 5-5"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p class="faq-a-inner">Many extended health benefit plans cover psychotherapy with a Registered Psychotherapist (RP) or Registered Social Worker (RSW). We recommend checking with your provider before your first session. We provide official receipts for all sessions for submission to your insurer.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        How long is a typical session?
+        <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5.5l5 5 5-5"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p class="faq-a-inner">Standard sessions are 50 minutes. Longer sessions of 80 minutes can be arranged for family therapy or when a client prefers extended time. We'll discuss what works best for you during your consultation.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        What if I'm not sure which service is right for me?
+        <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5.5l5 5 5-5"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p class="faq-a-inner">That's exactly what our free consultation is for. You don't need to have it all figured out — just reach out and share what's on your mind. We'll listen, ask a few questions, and help guide you toward the right fit. You can also <a href="services.html">explore our services page</a> for more detail on each offering.</p>
+      </div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Is everything I share kept confidential?
+        <span class="faq-chevron"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 5.5l5 5 5-5"/></svg></span>
+      </button>
+      <div class="faq-a">
+        <p class="faq-a-inner">Yes. Confidentiality is a cornerstone of our practice. All clinicians at Success in Steps are bound by their professional regulatory bodies' codes of ethics. Information is only shared in limited legally required circumstances (such as risk of serious harm), which your therapist will discuss with you in your first session.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- LOCATION -->
+<section class="location-section">
+  <div class="location-inner">
+    <div class="location-content reveal">
+      <span class="eyebrow eyebrow--sage eyebrow-line">Find Us</span>
+      <h2>Conveniently located in <em>Ottawa</em></h2>
+      <p>Our clinic is easily accessible by car and transit, with free parking available on-site.</p>
+      <div class="location-details">
+        <div class="loc-row">
+          <div class="loc-dot"></div>
+          <div class="loc-text">
+            <strong>Address</strong>
+            111 Colonnade Road North, Suite 201<br>Ottawa, Ontario K2E 7M3
+          </div>
+        </div>
+        <div class="loc-row">
+          <div class="loc-dot"></div>
+          <div class="loc-text">
+            <strong>Parking</strong>
+            Free surface parking available directly in front of the building
+          </div>
+        </div>
+        <div class="loc-row">
+          <div class="loc-dot"></div>
+          <div class="loc-text">
+            <strong>Transit</strong>
+            Accessible via OC Transpo — Colonnade / Meadowlands area
+          </div>
+        </div>
+      </div>
+      <a href="https://maps.google.com/?q=111+Colonnade+Road+North+Ottawa+Ontario" target="_blank" rel="noopener" class="btn btn-purple">Get Directions &nbsp;→</a>
+    </div>
+
+    <div class="map-frame reveal d2">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.0!2d-75.7250!3d45.3530!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05e8bc6b5c3d%3A0x9e3a9f3a!2s111%20Colonnade%20Rd%20N%2C%20Ottawa%2C%20ON%20K2E%207M3!5e0!3m2!1sen!2sca!4v1"
+        width="100%" height="100%"
+        style="border:0; display:block; width:100%; height:100%;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Success in Steps Ottawa clinic location">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <span class="eyebrow eyebrow--faint eyebrow-line" style="justify-content:center;">You've Already Taken a Step</span>
+    <h2>Healing begins with a<br>single <em>conversation</em></h2>
+    <p>Whether you're ready to book or just have questions — we're here and we'd love to hear from you.</p>
+    <div class="cta-btns">
+      <a href="services.html" class="btn btn-white">Explore Services</a>
+      <a href="our-team.html" class="btn btn-outline-white">Meet Our Team</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<div class="footer-ocf">
+  <div class="footer-ocf-inner">
+    <div>
+      <span class="ocf-label">In Collaboration With</span>
+      <p class="ocf-text">Sylvia Corzato is a proud counselling provider with the <strong>Ottawa Cancer Foundation</strong>, offering psychotherapy support as part of their mental health programs for individuals and families affected by cancer.</p>
+    </div>
+    <img class="ocf-logo"
+         src="https://successinsteps.ca/wp-content/uploads/elementor/thumbs/20240527141414_ocf_logo_eng_colour_rgb-r352ad9nhcfo9lrd6u8r734r4nv5w7jf971kjtxu68.png"
+         alt="Ottawa Cancer Foundation">
+  </div>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-row">
+        <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+        <div class="footer-brand-name">Success in Steps<small>Therapy &amp; Counselling</small></div>
+      </div>
+      <p class="footer-desc">Compassionate psychotherapy and counselling in Ottawa, Ontario. Serving individuals and families since 2016.</p>
+      <p class="footer-addr">111 Colonnade Road North, Suite 201<br>Ottawa, Ontario K2E 7M3</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html#about">About Sylvia</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="join-our-team.html">Join Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#individual">Individual Counselling (15+)</a></li>
+        <li><a href="services.html#parent">Parent Counselling</a></li>
+        <li><a href="services.html#family">Family Counselling</a></li>
+        <li><a href="contact.html">Book a Session</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Success in Steps. All rights reserved.</span>
+    <div class="social-row">
+      <a href="https://www.facebook.com/successinsteps" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      <a href="https://www.linkedin.com/in/sylvia-corzato-successinsteps/" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="https://www.instagram.com/success.in.steps.clinic" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* Burger */
+const burger = document.getElementById('burgerBtn');
+const mob = document.getElementById('mobileNav');
+burger.addEventListener('click', () => {
+  const o = burger.classList.toggle('open');
+  mob.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open'); mob.classList.remove('open'); document.body.style.overflow = '';
+}));
+
+/* Scroll reveal */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold:0.08, rootMargin:'0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!expanded) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.nextElementSibling.classList.add('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
