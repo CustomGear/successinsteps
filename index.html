@@ -141,11 +141,7 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   height:var(--nav-h);
   display:flex; align-items:center; justify-content:space-between;
   padding:0 3rem;
-  background:rgba(253,252,251,0);
-  transition:background 0.4s ease, box-shadow 0.4s ease;
-}
-.nav.scrolled {
-  background:rgba(253,252,251,0.96);
+  background:rgba(253,252,251,0.97);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   box-shadow:0 1px 0 var(--sand);
@@ -1612,11 +1608,6 @@ footer {
 
 
 <script>
-/* Nav scroll */
-const nav = document.getElementById('mainNav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive:true });
-nav.classList.toggle('scrolled', scrollY > 20);
-
 /* Burger */
 const burger = document.getElementById('burgerBtn');
 const mob    = document.getElementById('mobileNav');
