@@ -937,14 +937,15 @@ footer {
   .testimonial-grid { grid-template-columns:1fr 1fr; }
 }
 @media (max-width:900px) {
+  .announce-bar { display:none; }
+
   .nav { padding:0 1.5rem; }
   .nav-links { display:none; }
   .burger { display:flex; }
 
-  .hero-content { padding:2.5rem 1.8rem 4rem; max-width:100%; }
+  .hero-content { padding:2.8rem 1.8rem 3.5rem; max-width:100%; }
   .hero-bg img { object-position:65% center; }
-  .hero-badge-wrap { bottom:2rem; right:1.5rem; }
-  .hero-badge { max-width:226px; }
+  .hero-badge-wrap { display:none; }
 
   .sylvia-inner { grid-template-columns:1fr; gap:2.5rem; }
   .sylvia-img { aspect-ratio:4/3; }
@@ -988,11 +989,14 @@ footer {
   .press-logo { height:40px; }
 }
 @media (max-width:600px) {
-  .hero-content { padding:2rem 1.5rem 3.5rem; }
-  .hero-stats { flex-direction:column; gap:1.2rem; }
-  .hero-btns { flex-direction:column; }
-  .hero-btns .btn { justify-content:center; text-align:center; }
-  .hero-badge-wrap { display:none; }
+  .hero-content { padding:2rem 1.4rem 3rem; }
+  .hero-content h1 { font-size:clamp(1.9rem, 8.5vw, 2.6rem); line-height:1.1; margin-bottom:1rem; }
+  .hero-desc { font-size:0.88rem; }
+  .hero-stats { flex-direction:row; gap:2rem; flex-wrap:wrap; }
+  .stat-num { font-size:2rem; }
+  .stat-label { font-size:0.65rem; }
+  .hero-btns { flex-direction:row; gap:0.6rem; flex-wrap:wrap; margin-bottom:2rem; }
+  .hero-btns .btn { flex:1; min-width:130px; justify-content:center; text-align:center; padding:0.75rem 0.9rem; font-size:0.8rem; }
   .approach-grid { grid-template-columns:1fr; }
   .clinic-mosaic { grid-template-columns:1fr; }
   .values-row { grid-template-columns:1fr 1fr; }
@@ -1054,7 +1058,7 @@ footer {
 
   <div class="hero-content">
     <h1>When life asks more<br><em>than you can give</em></h1>
-    <p class="hero-desc">Compassionate psychotherapy in Ottawa — in-person &amp; virtual.</p>
+    <p class="hero-desc">Compassionate psychotherapy in Ottawa —&nbsp;in&#8209;person &amp; virtual.</p>
     <div class="hero-btns">
       <a href="contact.html" class="btn btn-white">Book a Consultation</a>
       <a href="services.html" class="btn btn-outline-white">Explore Services</a>
