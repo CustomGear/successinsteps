@@ -939,8 +939,17 @@ footer {
   .nav-links { display:none; }
   .burger { display:flex; }
 
-  .hero-content { padding:2.8rem 1.8rem 3.5rem; max-width:100%; }
-  .hero-bg img { object-position:65% center; }
+  .hero { align-items:flex-end; }
+  .hero-overlay {
+    background:linear-gradient(to top,
+      rgba(12,6,30,0.96) 0%,
+      rgba(12,6,30,0.82) 38%,
+      rgba(12,6,30,0.3) 65%,
+      transparent 100%
+    );
+  }
+  .hero-bg img { object-position:70% 8%; }
+  .hero-content { padding:0 1.8rem 3rem; max-width:100%; }
   .hero-badge-wrap { display:none; }
 
   .sylvia-inner { grid-template-columns:1fr; gap:2.5rem; }
