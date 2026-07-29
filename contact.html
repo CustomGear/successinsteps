@@ -550,6 +550,18 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
         </div>
 
         <div class="form-group">
+          <label for="clinician">Preferred Clinician</label>
+          <select id="clinician" name="clinician">
+            <option value="no-preference" selected>No preference — help me find the right fit</option>
+            <option value="sylvia">Sylvia Corzato, RP, MACP — Founder &amp; Director</option>
+            <option value="betsy">Betsy Prager, RSW</option>
+            <option value="sarah-grace">Sarah Grace Karasz, RP (Qualifying)</option>
+            <option value="jessica">Jessica Lavoie, RP (Qualifying)</option>
+            <option value="jason">Jason Taylor, PhD, RP</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <label for="format">Preferred Session Format</label>
           <select id="format" name="format">
             <option value="" disabled selected>In-person, virtual, or no preference</option>
@@ -894,6 +906,15 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     }
   });
 });
+
+/* Pre-select preferred clinician from ?clinician= URL param */
+const clinicianParam = new URLSearchParams(window.location.search).get('clinician');
+if (clinicianParam) {
+  const clinicianSelect = document.getElementById('clinician');
+  if (clinicianSelect && [...clinicianSelect.options].some(o => o.value === clinicianParam)) {
+    clinicianSelect.value = clinicianParam;
+  }
+}
 </script>
 </body>
 </html>

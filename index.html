@@ -785,6 +785,7 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   background:#fff; border:1px solid var(--sand);
   border-radius:var(--r); overflow:hidden;
   transition:box-shadow 0.3s, transform 0.3s;
+  display:block; text-decoration:none; color:inherit;
 }
 .team-card:hover { box-shadow:0 10px 40px rgba(0,0,0,0.09); transform:translateY(-3px); }
 .team-photo { aspect-ratio:1; overflow:hidden; background:var(--sand); }
@@ -1481,10 +1482,11 @@ footer {
       <span class="eyebrow eyebrow--purple eyebrow-line" style="justify-content:center;">Our Clinical Team</span>
       <h2>Skilled therapists,<br>shared values</h2>
       <p>Success in Steps is home to a team of independent associate clinicians. Each brings their own strengths and style — all sharing one commitment to thoughtful, compassionate care.</p>
+      <a href="our-team.html" class="link-arrow" style="justify-content:center;margin-top:0.8rem;">Meet the Full Team &nbsp;→</a>
     </div>
 
     <div class="team-grid">
-      <div class="team-card reveal">
+      <a class="team-card reveal" href="our-team.html#sylvia">
         <div class="team-photo">
           <img src="Branding - WebSize/Success_in_Steps_Branding_064_websize.jpg" alt="Sylvia Corzato, RP — Founder">
         </div>
@@ -1497,9 +1499,9 @@ footer {
             <span class="tag">Parenting</span><span class="tag">Burnout</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="team-card reveal d1">
+      <a class="team-card reveal d1" href="our-team.html#betsy">
         <div class="team-photo">
           <img src="team-photos/betsy-prager.jpg" alt="Betsy Prager, RSW">
         </div>
@@ -1511,9 +1513,9 @@ footer {
             <span class="tag">Family Therapy</span><span class="tag">Addictions</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="team-card reveal d2">
+      <a class="team-card reveal d2" href="our-team.html#sarah-grace">
         <div class="team-photo">
           <img src="team-photos/sarah-grace-karasz.jpg" alt="Sarah Grace Karasz, RP (Qualifying)">
         </div>
@@ -1525,9 +1527,9 @@ footer {
             <span class="tag">Narrative</span><span class="tag">Mindfulness</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="team-card reveal d3">
+      <a class="team-card reveal d3" href="our-team.html#jessica">
         <div class="team-photo">
           <img src="team-photos/jessica-lavoie.jpg" alt="Jessica Lavoie, RP (Qualifying)">
         </div>
@@ -1539,9 +1541,9 @@ footer {
             <span class="tag">Individual</span><span class="tag">Family</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="team-card reveal d1">
+      <a class="team-card reveal d1" href="our-team.html#jason">
         <div class="team-photo">
           <img src="team-photos/jason-taylor.jpg" alt="Jason Taylor, PhD, RP">
         </div>
@@ -1552,7 +1554,7 @@ footer {
             <span class="tag">PhD Clinical Psychology</span><span class="tag">Individual Counselling</span>
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <div class="join-card reveal">

@@ -134,7 +134,8 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
 .assoc-label { font-size:0.65rem; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); display:flex; align-items:center; gap:1rem; max-width:var(--max-w); margin:0 auto 2.5rem; }
 .assoc-label::after { content:''; flex:1; height:1px; background:var(--sand); }
 .assoc-grid { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
-.assoc-card { background:var(--cream); border:1px solid var(--sand); border-radius:var(--r); overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.3s, transform 0.3s; }
+.assoc-card { background:var(--cream); border:1px solid var(--sand); border-radius:var(--r); overflow:hidden; display:flex; flex-direction:column; transition:box-shadow 0.3s, transform 0.3s; scroll-margin-top:calc(var(--nav-h) + 24px); }
+.sylvia-featured-section { scroll-margin-top:var(--nav-h); }
 .assoc-card:hover { box-shadow:0 10px 40px rgba(0,0,0,0.09); transform:translateY(-3px); }
 .assoc-photo { aspect-ratio:1; overflow:hidden; background:var(--sand); }
 .assoc-photo img { width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform 0.45s ease; }
@@ -270,7 +271,7 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
 
 
 <!-- SYLVIA FEATURED -->
-<section class="sylvia-featured-section">
+<section class="sylvia-featured-section" id="sylvia">
   <div class="section-label">Founder &amp; Director</div>
 
   <div class="sylvia-grid">
@@ -312,7 +313,7 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
         <span class="area-tag">Parent Counselling</span>
         <span class="area-tag">Family Counselling</span>
       </div>
-      <a href="contact.html" class="btn btn-purple">Book with Sylvia</a>
+      <a href="contact.html?clinician=sylvia" class="btn btn-purple">Book with Sylvia</a>
     </div>
   </div>
 </section>
@@ -324,7 +325,7 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
   <div class="assoc-grid">
 
     <!-- Betsy Prager -->
-    <div class="assoc-card reveal">
+    <div class="assoc-card reveal" id="betsy">
       <div class="assoc-photo">
         <img src="team-photos/betsy-prager.jpg" alt="Betsy Prager, RSW">
       </div>
@@ -340,12 +341,12 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
           <span class="assoc-tag">Mental Health</span>
           <span class="assoc-tag">Individual (15+)</span>
         </div>
-        <a href="mailto:betsylprager@gmail.com" class="assoc-link">Connect with Betsy &nbsp;→</a>
+        <a href="contact.html?clinician=betsy" class="assoc-link">Connect with Betsy &nbsp;→</a>
       </div>
     </div>
 
     <!-- Sarah Grace Karasz -->
-    <div class="assoc-card reveal d1">
+    <div class="assoc-card reveal d1" id="sarah-grace">
       <div class="assoc-photo">
         <img src="team-photos/sarah-grace-karasz.jpg" alt="Sarah Grace Karasz, RP (Qualifying)">
       </div>
@@ -360,12 +361,12 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
           <span class="assoc-tag">Mindfulness</span>
           <span class="assoc-tag">Adults 18+</span>
         </div>
-        <a href="https://www.psychologytoday.com/profile/1690431" target="_blank" class="assoc-link">Connect with Sarah Grace &nbsp;→</a>
+        <a href="contact.html?clinician=sarah-grace" class="assoc-link">Connect with Sarah Grace &nbsp;→</a>
       </div>
     </div>
 
     <!-- Jessica Lavoie -->
-    <div class="assoc-card reveal d2">
+    <div class="assoc-card reveal d2" id="jessica">
       <div class="assoc-photo">
         <img src="team-photos/jessica-lavoie.jpg" alt="Jessica Lavoie, RP (Qualifying)">
       </div>
@@ -379,12 +380,12 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
           <span class="assoc-tag">Individual Counselling</span>
           <span class="assoc-tag">Family Counselling</span>
         </div>
-        <a href="https://www.psychologytoday.com/ca/therapists/jessica-lavoie-nepean-on/1641817" target="_blank" class="assoc-link">Connect with Jessica &nbsp;→</a>
+        <a href="contact.html?clinician=jessica" class="assoc-link">Connect with Jessica &nbsp;→</a>
       </div>
     </div>
 
     <!-- Jason Taylor -->
-    <div class="assoc-card reveal d3">
+    <div class="assoc-card reveal d3" id="jason">
       <div class="assoc-photo">
         <img src="team-photos/jason-taylor.jpg" alt="Jason Taylor, PhD, RP">
       </div>
@@ -396,7 +397,7 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
           <span class="assoc-tag">PhD Clinical Psychology</span>
           <span class="assoc-tag">Individual Counselling</span>
         </div>
-        <a href="https://tayloredtherapy.ca/" target="_blank" class="assoc-link">Connect with Jason &nbsp;→</a>
+        <a href="contact.html?clinician=jason" class="assoc-link">Connect with Jason &nbsp;→</a>
       </div>
     </div>
 
