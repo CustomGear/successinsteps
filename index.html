@@ -402,6 +402,7 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   background:var(--purple); opacity:0.35;
   vertical-align:middle; margin:0 0.8rem;
 }
+.quote-attr-break { display:none; }
 
 /* ══════════════════════════════════════════
    MEET SYLVIA
@@ -954,6 +955,7 @@ footer {
   .hero-badge-wrap { display:none; }
 
   .sylvia-inner { grid-template-columns:1fr; gap:2.5rem; }
+  .sylvia-photo-wrap { margin-top:2rem; }
   .sylvia-img { aspect-ratio:4/3; object-position:center 88%; }
 
   .modalities-inner { grid-template-columns:1fr; gap:2.5rem; }
@@ -1012,6 +1014,7 @@ footer {
   .press-logo-wrap { padding:0 2rem; }
   .press-logo { height:44px; }
   .quote-bg-text { display:none; }
+  .quote-attr-break { display:inline; }
 }
 
 </style>
@@ -1145,7 +1148,7 @@ footer {
     </blockquote>
     <p class="quote-attr">
       <span class="quote-rule"></span>
-      Sylvia Corzato &nbsp;·&nbsp; Founder, Success in Steps
+      Sylvia Corzato<br class="quote-attr-break">Founder, Success in Steps
       <span class="quote-rule"></span>
     </p>
   </div>
