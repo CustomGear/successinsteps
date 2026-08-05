@@ -12,11 +12,11 @@
 
 /* ── TOKENS ── */
 :root {
-  --purple:       #6035A0;
-  --purple-mid:   #7A4BB5;
-  --purple-deep:  #29165A;
-  --purple-light: #EDE6F7;
-  --purple-pale:  #F7F3FD;
+  --purple:       #1C3450;
+  --purple-mid:   #243D5E;
+  --purple-deep:  #131D2E;
+  --purple-light: #E4E9EF;
+  --purple-pale:  #F5F7F9;
   --navy:         #1C3450;
   --navy-mid:     #243D5E;
   --navy-dark:    #131D2E;
@@ -101,7 +101,7 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   transition:all 0.35s var(--ease);
 }
 .btn-purple  { background:var(--purple); color:#fff; }
-.btn-purple:hover  { background:var(--purple-mid); transform:translateY(-2px); box-shadow:0 10px 28px rgba(96,53,160,0.28); }
+.btn-purple:hover  { background:var(--purple-mid); transform:translateY(-2px); box-shadow:0 10px 28px rgba(28,52,80,0.28); }
 .btn-ghost   { background:transparent; color:var(--ink); border:1.5px solid var(--sand); }
 .btn-ghost:hover   { border-color:var(--taupe); transform:translateY(-2px); }
 .btn-white   { background:#fff; color:var(--navy); box-shadow:0 4px 20px rgba(0,0,0,0.1); }
@@ -239,7 +239,7 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   margin-bottom:1.4rem;
   opacity:0; animation:fadeUp 0.7s 0.22s var(--ease) both;
 }
-.hero-content h1 em { font-style:italic; color:rgba(200,175,245,0.92); }
+.hero-content h1 em { font-style:italic; color:rgba(178,199,224,0.92); }
 .hero-desc {
   font-size:0.97rem; line-height:1.6; font-weight:300;
   color:rgba(255,255,255,0.54); margin-bottom:2.5rem;
@@ -506,74 +506,68 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
    SERVICES
 ══════════════════════════════════════════ */
 .services-section {
-  background:var(--warm-white);
-  padding:8rem 3rem;
-  border-top:1px solid var(--sand);
+  background:var(--purple);
+  padding:6rem 3rem;
 }
 .svc-header {
-  text-align:center; max-width:580px; margin:0 auto 4.5rem;
+  text-align:center; max-width:580px; margin:0 auto 3.5rem;
 }
-.svc-header h2 { font-size:clamp(2.2rem,3.2vw,3.4rem); color:var(--navy); margin-bottom:0.8rem; }
-.svc-header p { font-size:0.93rem; color:var(--stone); line-height:1.8; }
+.svc-header h2 { font-size:clamp(2.2rem,3.2vw,3.4rem); color:#fff; margin-bottom:0.8rem; }
+.svc-header p { font-size:0.93rem; color:rgba(255,255,255,0.55); line-height:1.8; }
 
 /* 3 main service cards */
 .svc-primary {
   display:grid; grid-template-columns:repeat(3,1fr);
-  gap:1.5rem; max-width:var(--max-w); margin:0 auto 5rem;
+  gap:1.4rem; max-width:var(--max-w); margin:0 auto 3.5rem;
 }
 .svc-primary-card {
-  background:#fff; border:1.5px solid var(--sand);
-  border-radius:var(--r); padding:2.4rem 2rem 2rem;
-  transition:box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  background:rgba(255,255,255,0.08); border:1.5px solid rgba(255,255,255,0.14);
+  border-radius:var(--r); padding:2.3rem 2rem 2rem;
+  transition:background 0.3s, transform 0.3s, border-color 0.3s;
   position:relative; overflow:hidden;
 }
 .svc-primary-card::after {
   content:''; position:absolute; bottom:0; left:0; right:0; height:3px;
-  background:linear-gradient(90deg, var(--purple), var(--purple-mid));
+  background:linear-gradient(90deg, var(--gold), var(--gold-light));
   border-radius:0 0 calc(var(--r) - 1px) calc(var(--r) - 1px);
   opacity:0; transition:opacity 0.3s;
 }
-.svc-primary-card:hover { box-shadow:0 12px 44px rgba(96,53,160,0.1); transform:translateY(-3px); border-color:var(--purple-light); }
+.svc-primary-card:hover { background:rgba(255,255,255,0.12); transform:translateY(-3px); border-color:rgba(255,255,255,0.24); }
 .svc-primary-card:hover::after { opacity:1; }
 .svc-card-icon {
   width:52px; height:52px; border-radius:14px;
-  background:var(--purple-pale); margin-bottom:1.5rem;
+  background:rgba(255,255,255,0.1); margin-bottom:1.5rem;
   display:flex; align-items:center; justify-content:center;
 }
-.svc-card-icon svg { width:26px; height:26px; stroke:var(--purple); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.svc-card-icon svg { width:26px; height:26px; stroke:#fff; fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
 .svc-num { display:none; }
-.svc-primary-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:300; color:var(--navy); margin-bottom:0.65rem; line-height:1.2; }
-.svc-primary-card p { font-size:0.86rem; color:var(--stone); line-height:1.8; }
+.svc-primary-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:300; color:#fff; margin-bottom:0.65rem; line-height:1.2; }
+.svc-primary-card p { font-size:0.86rem; color:rgba(255,255,255,0.6); line-height:1.8; }
 .svc-primary-card .svc-note {
   display:inline-block; margin-top:1.1rem;
   font-size:0.67rem; font-weight:500; letter-spacing:0.15em;
-  text-transform:uppercase; color:var(--purple); opacity:0.72;
-  border-top:1px solid var(--purple-light); padding-top:0.7rem; width:100%;
+  text-transform:uppercase; color:var(--gold-light); opacity:0.85;
+  border-top:1px solid rgba(255,255,255,0.14); padding-top:0.7rem; width:100%;
 }
 
-/* Areas chips (6 in 3×2) */
-.svc-areas-head { text-align:center; margin-bottom:2rem; max-width:var(--max-w); margin-left:auto; margin-right:auto; }
+/* Areas chips (8 in 3-col grid) */
+.svc-areas-head { text-align:center; margin-bottom:0.4rem; max-width:var(--max-w); margin-left:auto; margin-right:auto; }
+.svc-areas-head p { text-align:center; font-size:0.78rem; color:rgba(255,255,255,0.4); font-weight:300; margin-bottom:1.8rem; }
 .svc-areas {
   max-width:var(--max-w); margin:0 auto;
   display:grid; grid-template-columns:repeat(3,1fr);
-  gap:0.85rem;
+  gap:1rem;
 }
 .svc-area-row {
-  background:var(--purple-pale); border:1px solid var(--purple-light);
-  border-radius:var(--r-sm); padding:1.3rem 1.5rem;
-  display:flex; align-items:flex-start; gap:0.85rem;
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--r-sm); padding:1.4rem 1.5rem;
   transition:background 0.22s, border-color 0.22s;
 }
-.svc-area-row:hover { background:var(--purple-light); border-color:#c4a8e8; }
-.svc-area-dash {
-  width:20px; height:20px; border-radius:6px;
-  background:var(--purple-light); border:1px solid #c4a8e8;
-  display:flex; align-items:center; justify-content:center; flex-shrink:0;
-}
-.svc-area-dash::after { content:''; width:8px; height:8px; border-radius:50%; background:var(--purple); opacity:0.6; }
-.svc-area-content h4 { font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; color:var(--navy); margin-bottom:0.25rem; }
-.svc-area-content p { font-size:0.76rem; color:var(--stone); line-height:1.65; }
-.svc-footer-cta { text-align:center; margin-top:3.5rem; }
+.svc-area-row:hover { background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.2); }
+.svc-area-dash { display:none; }
+.svc-area-content h4 { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:1rem; color:#fff; margin-bottom:0.4rem; }
+.svc-area-content p { font-size:0.78rem; color:rgba(255,255,255,0.45); line-height:1.7; font-weight:300; }
+.svc-footer-cta { text-align:center; margin-top:3rem; }
 
 /* ══════════════════════════════════════════
    APPROACH
@@ -732,45 +726,6 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
 .exp-body  { font-size:0.84rem; color:var(--stone); line-height:1.75; font-weight:300; }
 
 /* ══════════════════════════════════════════
-   TESTIMONIAL
-══════════════════════════════════════════ */
-.testimonial-section {
-  background:var(--cream);
-  padding:8rem 3rem;
-  border-top:1px solid var(--sand);
-}
-.testimonial-header { text-align:center; margin-bottom:4rem; }
-.testimonial-header h2 { font-size:clamp(2rem,2.8vw,3rem); color:var(--navy); margin-bottom:0.5rem; }
-.testimonial-header p { font-size:0.9rem; color:var(--stone); }
-.testimonial-grid {
-  max-width:var(--max-w); margin:0 auto;
-  display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;
-}
-.t-card {
-  background:#fff; border:1px solid var(--sand);
-  border-radius:var(--r); padding:2rem 2rem 1.8rem;
-  display:flex; flex-direction:column;
-  transition:box-shadow 0.3s, transform 0.3s;
-}
-.t-card:hover { box-shadow:0 8px 36px rgba(0,0,0,0.08); transform:translateY(-2px); }
-.t-stars { color:var(--gold); font-size:0.78rem; letter-spacing:0.18em; margin-bottom:1.1rem; }
-.t-text {
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.1rem; font-style:italic; font-weight:300;
-  color:var(--navy); line-height:1.65; flex:1; margin-bottom:1.6rem;
-}
-.t-client { display:flex; align-items:center; gap:0.75rem; padding-top:1.2rem; border-top:1px solid var(--sand); }
-.t-avatar {
-  width:38px; height:38px; border-radius:50%;
-  background:var(--purple-light);
-  display:flex; align-items:center; justify-content:center;
-  font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--purple);
-  font-weight:300; flex-shrink:0;
-}
-.t-name { font-size:0.82rem; font-weight:500; color:var(--navy); line-height:1.3; }
-.t-type { font-size:0.71rem; color:var(--stone); font-weight:300; }
-
-/* ══════════════════════════════════════════
    TEAM
 ══════════════════════════════════════════ */
 .team-section {
@@ -825,17 +780,6 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   padding:0.2rem 0.65rem; border-radius:20px;
   background:var(--purple-light); color:var(--purple);
 }
-.join-card {
-  background:var(--gold-light); border:1px solid #d8c8a8;
-  border-radius:var(--r); padding:2rem 2.5rem;
-  display:flex; align-items:center; justify-content:space-between; gap:2rem;
-}
-.join-card h3 {
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.35rem; font-weight:400; color:var(--navy); margin-bottom:0.35rem;
-}
-.join-card p { font-size:0.86rem; max-width:470px; }
-
 /* ══════════════════════════════════════════
    CTA
 ══════════════════════════════════════════ */
@@ -849,7 +793,7 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   position:absolute; top:50%; left:50%;
   transform:translate(-50%,-50%);
   width:800px; height:800px; border-radius:50%;
-  background:radial-gradient(circle, rgba(96,53,160,0.22) 0%, transparent 62%);
+  background:radial-gradient(circle, rgba(28,52,80,0.22) 0%, transparent 62%);
   pointer-events:none;
 }
 .cta-inner { position:relative; z-index:1; max-width:620px; margin:0 auto; }
@@ -933,7 +877,6 @@ footer {
 @media (max-width:1024px) {
   .hero-content { padding:4rem 3rem 4rem 4rem; }
   .svc-areas { grid-template-columns:1fr 1fr; }
-  .testimonial-grid { grid-template-columns:1fr 1fr; }
 }
 @media (max-width:900px) {
   .announce-bar { display:none; }
@@ -963,8 +906,6 @@ footer {
 
   .svc-primary { grid-template-columns:1fr; }
   .svc-areas { grid-template-columns:1fr 1fr; }
-  .testimonial-grid { grid-template-columns:1fr; }
-
   .approach-inner { grid-template-columns:1fr; gap:2.5rem; }
   .approach-label p { max-width:100%; }
 
@@ -979,7 +920,6 @@ footer {
   .experience-photo { aspect-ratio:4/3; }
 
   .team-grid { grid-template-columns:1fr 1fr; }
-  .join-card { flex-direction:column; }
 
   .footer-ocf { padding:1.5rem; }
   .footer-ocf-inner { flex-direction:column; gap:1.5rem; }
@@ -989,7 +929,7 @@ footer {
 
   .quote-section, .sylvia-section, .modalities-section,
   .services-section, .approach-section, .clinic-section,
-  .experience-section, .testimonial-section, .team-section, .cta-section {
+  .experience-section, .team-section, .cta-section {
     padding:5rem 1.5rem;
   }
   .svc-areas { grid-template-columns:1fr; }
@@ -1062,8 +1002,8 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="Branding - WebSize/Success_in_Steps_Branding_080_websize.jpg"
-         alt="Sylvia Corzato, RP — Success in Steps, Ottawa">
+    <img src="images/reception-hero.jpg"
+         alt="Success in Steps reception, Ottawa">
   </div>
   <div class="hero-overlay"></div>
 
@@ -1089,7 +1029,7 @@ footer {
   <div class="hero-badge-wrap">
     <div class="hero-badge">
       <div class="badge-icon">
-        <svg viewBox="0 0 878.17 1359.94" width="15" height="22" fill="#6035A0" xmlns="http://www.w3.org/2000/svg"><path d="M694.21,1357.63c-1.18,1.26-5.3,2.32-7.18,2.31l-243.34-.52c-6.43-1.97-7.64-7.82-9.46-13.52-28.44-89.18-39.96-186.55-95.6-265.14-11.37-16.05-24.88-30.54-36.6-46.34-15.96-21.52-30.12-44.51-45.32-66.59-25.73-37.37-49.44-68.78-69.61-110.26-16.68-34.29-26.46-72.39-48.28-103.61-33.79-48.34-70.17-94.56-102.94-143.87-9.49-14.28-34.03-46.86-35.62-62.3-4.2-40.87,41.69-47.4,72.02-39.07,65.11,17.88,105.99,107.04,148.13,155.63,22.46,25.9,53.19,45.35,70.62,74.27,14.01,23.25,21.85,50.61,32.33,75.59,8.34,19.89,20.33,50.84,31.63,68.29,12.69,19.59,36.07,10.39,32.11-12.14-3.51-19.98-18.75-45.14-25.33-65.6-3.03-9.42-9.78-32.84-7.76-41.78s12.24-8.49,17.75-2.19c8.1,9.27,16.74,27.26,24.61,38.34,17.05,24.02,37.82,50.51,56.38,73.52,9.14,11.33,21.89,30.77,38.41,18.52,5.83-4.32,7.48-10.15,6.26-17.25-2.13-12.37-35.42-53.12-44.53-66.38-13.21-19.22-25.2-39.3-38.37-58.56-3.34-8.71,5.2-13.03,12.25-6.26,10.05,9.66,19.88,22.83,29.9,33.05,13.18,13.43,27.61,25.67,40.5,39.43,9.37,10.01,35.59,44.6,45.45,48.47,13.21,5.19,23.65-8.03,21.88-20.89-1.62-11.74-23.86-38.73-31.92-49.01-23.32-29.75-49.07-57.67-76.94-83.18-1.57-4.29-2.03-9.91,2.33-12.51,6.77-4.04,13.22.99,19.37,4.04,40.75,20.21,79.75,47.9,116.92,73.91,11.01,3.67,21.82-8.55,19.85-18.82-2.72-14.23-40.77-49-53.06-58.89-41.78-33.62-95.84-49.71-130.86-89.95-8.72-10.03-23.31-29.87.03-31.98,29.98-2.71,94.33,18.91,114.81-10.07,10.9-15.44,1.67-26.07-14.37-29.47-29.77-6.31-62.94-6.71-92.98-12.92-17.51-3.62-34.65-12.61-52.91-17.02-27.37-6.61-54.97-7.71-82.14-12.77-15.99-2.98-16.29-12.5-20.49-26.47-24.54-81.66-38.7-176.39-42.2-261.59-1.51-36.8-7.24-117.78,24.91-142.89,15.78-12.33,39.79-10,50.8,7.2,16.47,25.72,16.19,102.29,20.28,135.61,6.44,52.5,21.84,101.39,34.55,152.32,4.68,18.74,11.8,67.69,22.3,80.63,10.23,12.61,35,13.21,36.93-5.98,1.99-19.81.47-46.1,1.05-66.9,1.89-67.81,7.59-135.43,16.09-202.77,4.61-36.55,11.56-112.04,30.41-141.47,22.51-35.14,73.61-26.84,77.32,17.42,3.61,43.02-9.62,96.14-11.98,140.88-3.37,63.76-4.01,127.93-6.99,191.88-.89,19.14-4.5,41.12-3.02,60.01,1.78,22.74,26.14,29.06,32.28,5.24,12.61-67.87,30.34-134.68,43.39-202.44,7.8-40.54,11.09-88.02,21.14-126.75,4.6-17.71,13.49-35.69,32.87-40.07,26.66-6.02,48.27,12.77,50.22,39.15,2.28,30.91-7.61,69.87-11.89,101.12-9.22,67.32-15.38,137.87-28.58,204.26-4.92,24.77-13.22,49.26-18.22,73.71-2.4,11.74-4.62,20.57,3.67,30.71,21.88,26.72,44.06-7.54,56.19-24.79,19.31-27.44,35.05-58.85,48.2-89.69,13-30.48,22.86-64.08,37.32-93.58,10.6-21.62,29.02-51.26,57.56-43.23,36.91,10.37,16.52,73.77,9.01,98.84-21.9,52.64-39.2,107.21-60.93,159.9-16.09,39.01-37.09,73.9-47.75,115.13-23.75,91.87-31.09,189.29-57.9,280.86-11.99,40.94-30.39,65.64-34.68,110.22-7.69,80.03,5.46,170.23,18.27,249.54,3.4,21.06,11.56,49.1,12.69,69.27.13,2.27.32,6.55-1.25,8.22Z"/></svg>
+        <svg viewBox="0 0 878.17 1359.94" width="15" height="22" fill="#1C3450" xmlns="http://www.w3.org/2000/svg"><path d="M694.21,1357.63c-1.18,1.26-5.3,2.32-7.18,2.31l-243.34-.52c-6.43-1.97-7.64-7.82-9.46-13.52-28.44-89.18-39.96-186.55-95.6-265.14-11.37-16.05-24.88-30.54-36.6-46.34-15.96-21.52-30.12-44.51-45.32-66.59-25.73-37.37-49.44-68.78-69.61-110.26-16.68-34.29-26.46-72.39-48.28-103.61-33.79-48.34-70.17-94.56-102.94-143.87-9.49-14.28-34.03-46.86-35.62-62.3-4.2-40.87,41.69-47.4,72.02-39.07,65.11,17.88,105.99,107.04,148.13,155.63,22.46,25.9,53.19,45.35,70.62,74.27,14.01,23.25,21.85,50.61,32.33,75.59,8.34,19.89,20.33,50.84,31.63,68.29,12.69,19.59,36.07,10.39,32.11-12.14-3.51-19.98-18.75-45.14-25.33-65.6-3.03-9.42-9.78-32.84-7.76-41.78s12.24-8.49,17.75-2.19c8.1,9.27,16.74,27.26,24.61,38.34,17.05,24.02,37.82,50.51,56.38,73.52,9.14,11.33,21.89,30.77,38.41,18.52,5.83-4.32,7.48-10.15,6.26-17.25-2.13-12.37-35.42-53.12-44.53-66.38-13.21-19.22-25.2-39.3-38.37-58.56-3.34-8.71,5.2-13.03,12.25-6.26,10.05,9.66,19.88,22.83,29.9,33.05,13.18,13.43,27.61,25.67,40.5,39.43,9.37,10.01,35.59,44.6,45.45,48.47,13.21,5.19,23.65-8.03,21.88-20.89-1.62-11.74-23.86-38.73-31.92-49.01-23.32-29.75-49.07-57.67-76.94-83.18-1.57-4.29-2.03-9.91,2.33-12.51,6.77-4.04,13.22.99,19.37,4.04,40.75,20.21,79.75,47.9,116.92,73.91,11.01,3.67,21.82-8.55,19.85-18.82-2.72-14.23-40.77-49-53.06-58.89-41.78-33.62-95.84-49.71-130.86-89.95-8.72-10.03-23.31-29.87.03-31.98,29.98-2.71,94.33,18.91,114.81-10.07,10.9-15.44,1.67-26.07-14.37-29.47-29.77-6.31-62.94-6.71-92.98-12.92-17.51-3.62-34.65-12.61-52.91-17.02-27.37-6.61-54.97-7.71-82.14-12.77-15.99-2.98-16.29-12.5-20.49-26.47-24.54-81.66-38.7-176.39-42.2-261.59-1.51-36.8-7.24-117.78,24.91-142.89,15.78-12.33,39.79-10,50.8,7.2,16.47,25.72,16.19,102.29,20.28,135.61,6.44,52.5,21.84,101.39,34.55,152.32,4.68,18.74,11.8,67.69,22.3,80.63,10.23,12.61,35,13.21,36.93-5.98,1.99-19.81.47-46.1,1.05-66.9,1.89-67.81,7.59-135.43,16.09-202.77,4.61-36.55,11.56-112.04,30.41-141.47,22.51-35.14,73.61-26.84,77.32,17.42,3.61,43.02-9.62,96.14-11.98,140.88-3.37,63.76-4.01,127.93-6.99,191.88-.89,19.14-4.5,41.12-3.02,60.01,1.78,22.74,26.14,29.06,32.28,5.24,12.61-67.87,30.34-134.68,43.39-202.44,7.8-40.54,11.09-88.02,21.14-126.75,4.6-17.71,13.49-35.69,32.87-40.07,26.66-6.02,48.27,12.77,50.22,39.15,2.28,30.91-7.61,69.87-11.89,101.12-9.22,67.32-15.38,137.87-28.58,204.26-4.92,24.77-13.22,49.26-18.22,73.71-2.4,11.74-4.62,20.57,3.67,30.71,21.88,26.72,44.06-7.54,56.19-24.79,19.31-27.44,35.05-58.85,48.2-89.69,13-30.48,22.86-64.08,37.32-93.58,10.6-21.62,29.02-51.26,57.56-43.23,36.91,10.37,16.52,73.77,9.01,98.84-21.9,52.64-39.2,107.21-60.93,159.9-16.09,39.01-37.09,73.9-47.75,115.13-23.75,91.87-31.09,189.29-57.9,280.86-11.99,40.94-30.39,65.64-34.68,110.22-7.69,80.03,5.46,170.23,18.27,249.54,3.4,21.06,11.56,49.1,12.69,69.27.13,2.27.32,6.55-1.25,8.22Z"/></svg>
       </div>
       <div class="badge-copy">
         <strong>Registered Psychotherapist</strong>
@@ -1172,14 +1112,6 @@ footer {
       <p>With over 25 years of combined experience as a psychotherapist, parent coach, and behaviour therapist, Sylvia holds a Master's in Counselling Psychology with distinction from Yorkville University, and brings both professional depth and lived parenting experience to every client relationship.</p>
       <p>Founder of Success in Steps since 2016, Sylvia is a recognized voice on parenting and mental health in Ottawa. She is a regular contributor to CTV Morning Live Ottawa, and has been featured in the Globe and Mail, CBC, Today's Parent, and Parenting Times.</p>
 
-      <div class="media-feature-row">
-        <div class="media-feature-icon"><svg viewBox="0 0 878.17 1359.94" width="12" height="18" fill="#6035A0" xmlns="http://www.w3.org/2000/svg"><path d="M694.21,1357.63c-1.18,1.26-5.3,2.32-7.18,2.31l-243.34-.52c-6.43-1.97-7.64-7.82-9.46-13.52-28.44-89.18-39.96-186.55-95.6-265.14-11.37-16.05-24.88-30.54-36.6-46.34-15.96-21.52-30.12-44.51-45.32-66.59-25.73-37.37-49.44-68.78-69.61-110.26-16.68-34.29-26.46-72.39-48.28-103.61-33.79-48.34-70.17-94.56-102.94-143.87-9.49-14.28-34.03-46.86-35.62-62.3-4.2-40.87,41.69-47.4,72.02-39.07,65.11,17.88,105.99,107.04,148.13,155.63,22.46,25.9,53.19,45.35,70.62,74.27,14.01,23.25,21.85,50.61,32.33,75.59,8.34,19.89,20.33,50.84,31.63,68.29,12.69,19.59,36.07,10.39,32.11-12.14-3.51-19.98-18.75-45.14-25.33-65.6-3.03-9.42-9.78-32.84-7.76-41.78s12.24-8.49,17.75-2.19c8.1,9.27,16.74,27.26,24.61,38.34,17.05,24.02,37.82,50.51,56.38,73.52,9.14,11.33,21.89,30.77,38.41,18.52,5.83-4.32,7.48-10.15,6.26-17.25-2.13-12.37-35.42-53.12-44.53-66.38-13.21-19.22-25.2-39.3-38.37-58.56-3.34-8.71,5.2-13.03,12.25-6.26,10.05,9.66,19.88,22.83,29.9,33.05,13.18,13.43,27.61,25.67,40.5,39.43,9.37,10.01,35.59,44.6,45.45,48.47,13.21,5.19,23.65-8.03,21.88-20.89-1.62-11.74-23.86-38.73-31.92-49.01-23.32-29.75-49.07-57.67-76.94-83.18-1.57-4.29-2.03-9.91,2.33-12.51,6.77-4.04,13.22.99,19.37,4.04,40.75,20.21,79.75,47.9,116.92,73.91,11.01,3.67,21.82-8.55,19.85-18.82-2.72-14.23-40.77-49-53.06-58.89-41.78-33.62-95.84-49.71-130.86-89.95-8.72-10.03-23.31-29.87.03-31.98,29.98-2.71,94.33,18.91,114.81-10.07,10.9-15.44,1.67-26.07-14.37-29.47-29.77-6.31-62.94-6.71-92.98-12.92-17.51-3.62-34.65-12.61-52.91-17.02-27.37-6.61-54.97-7.71-82.14-12.77-15.99-2.98-16.29-12.5-20.49-26.47-24.54-81.66-38.7-176.39-42.2-261.59-1.51-36.8-7.24-117.78,24.91-142.89,15.78-12.33,39.79-10,50.8,7.2,16.47,25.72,16.19,102.29,20.28,135.61,6.44,52.5,21.84,101.39,34.55,152.32,4.68,18.74,11.8,67.69,22.3,80.63,10.23,12.61,35,13.21,36.93-5.98,1.99-19.81.47-46.1,1.05-66.9,1.89-67.81,7.59-135.43,16.09-202.77,4.61-36.55,11.56-112.04,30.41-141.47,22.51-35.14,73.61-26.84,77.32,17.42,3.61,43.02-9.62,96.14-11.98,140.88-3.37,63.76-4.01,127.93-6.99,191.88-.89,19.14-4.5,41.12-3.02,60.01,1.78,22.74,26.14,29.06,32.28,5.24,12.61-67.87,30.34-134.68,43.39-202.44,7.8-40.54,11.09-88.02,21.14-126.75,4.6-17.71,13.49-35.69,32.87-40.07,26.66-6.02,48.27,12.77,50.22,39.15,2.28,30.91-7.61,69.87-11.89,101.12-9.22,67.32-15.38,137.87-28.58,204.26-4.92,24.77-13.22,49.26-18.22,73.71-2.4,11.74-4.62,20.57,3.67,30.71,21.88,26.72,44.06-7.54,56.19-24.79,19.31-27.44,35.05-58.85,48.2-89.69,13-30.48,22.86-64.08,37.32-93.58,10.6-21.62,29.02-51.26,57.56-43.23,36.91,10.37,16.52,73.77,9.01,98.84-21.9,52.64-39.2,107.21-60.93,159.9-16.09,39.01-37.09,73.9-47.75,115.13-23.75,91.87-31.09,189.29-57.9,280.86-11.99,40.94-30.39,65.64-34.68,110.22-7.69,80.03,5.46,170.23,18.27,249.54,3.4,21.06,11.56,49.1,12.69,69.27.13,2.27.32,6.55-1.25,8.22Z"/></svg></div>
-        <div class="media-feature-text">
-          <strong>Regular Contributor — CTV Morning Live Ottawa</strong>
-          Expert panelist on parenting, family wellness, and mental health
-        </div>
-      </div>
-
       <div class="cred-row">
         <span class="cred-tag">MACP with Distinction</span>
         <span class="cred-tag">Registered Psychotherapist</span>
@@ -1222,7 +1154,7 @@ footer {
 <!-- SERVICES -->
 <section id="services" class="services-section">
   <div class="svc-header reveal">
-    <span class="eyebrow eyebrow--purple eyebrow-line" style="justify-content:center;">What We Offer</span>
+    <span class="eyebrow eyebrow--faint eyebrow-line" style="justify-content:center;">What We Offer</span>
     <h2>My Counselling &amp;<br>Coaching Services</h2>
     <p>Evidence-informed psychotherapy for individuals (15+), parents, and families, in our Ottawa clinic or securely online.</p>
   </div>
@@ -1255,56 +1187,63 @@ footer {
   </div>
 
   <div class="svc-areas-head reveal">
-    <span class="eyebrow eyebrow--stone eyebrow-line" style="justify-content:center;">Areas We Support</span>
+    <span class="eyebrow eyebrow--faint eyebrow-line" style="justify-content:center;">Areas We Support</span>
+    <p>Availability for specific specialties may vary by clinician.</p>
   </div>
 
   <div class="svc-areas reveal d1">
     <div class="svc-area-row">
-      <div class="svc-area-dash"></div>
       <div class="svc-area-content">
         <h4>Mental Health &amp; Emotional Well-being</h4>
         <p>Anxiety, depression, ADHD, emotional regulation, stress &amp; burnout, grief and loss.</p>
       </div>
     </div>
     <div class="svc-area-row">
-      <div class="svc-area-dash"></div>
       <div class="svc-area-content">
-        <h4>Self-Esteem &amp; Identity</h4>
-        <p>Shame, guilt, low self-worth, self-concept and identity work.</p>
+        <h4>Communication &amp; Social Skills</h4>
+        <p>Interpersonal skills, setting personal boundaries, communication development.</p>
       </div>
     </div>
     <div class="svc-area-row">
-      <div class="svc-area-dash"></div>
       <div class="svc-area-content">
         <h4>Life Transitions &amp; Coping</h4>
         <p>Navigating major life changes, burnout recovery, and building resilience.</p>
       </div>
     </div>
     <div class="svc-area-row">
-      <div class="svc-area-dash"></div>
+      <div class="svc-area-content">
+        <h4>Chronic Conditions &amp; Pain</h4>
+        <p>Psychological support for chronic illness, navigating diagnosis, ongoing health concerns, and pain management.</p>
+      </div>
+    </div>
+    <div class="svc-area-row">
+      <div class="svc-area-content">
+        <h4>Self-Esteem &amp; Identity</h4>
+        <p>Shame, guilt, low self-esteem, self-worth, self-identity, building a healthier relationship with yourself.</p>
+      </div>
+    </div>
+    <div class="svc-area-row">
+      <div class="svc-area-content">
+        <h4>Family Dynamics &amp; Parental Guidance</h4>
+        <p>Parenting support, behavioural challenges, ruptured relationships, loneliness &amp; isolation.</p>
+      </div>
+    </div>
+    <div class="svc-area-row">
+      <div class="svc-area-content">
+        <h4>Relationships &amp; Couples Work</h4>
+        <p>Strengthening connection, navigating conflict, rebuilding trust, and fostering healthier communication between partners.</p>
+      </div>
+    </div>
+    <div class="svc-area-row">
       <div class="svc-area-content">
         <h4>Trauma &amp; Emotional Processing</h4>
-        <p>Working through past experiences and trauma responses safely, at your pace.</p>
-      </div>
-    </div>
-    <div class="svc-area-row">
-      <div class="svc-area-dash"></div>
-      <div class="svc-area-content">
-        <h4>Communication &amp; Social Skills</h4>
-        <p>Interpersonal development, personal boundaries, and communication skills.</p>
-      </div>
-    </div>
-    <div class="svc-area-row">
-      <div class="svc-area-dash"></div>
-      <div class="svc-area-content">
-        <h4>Family Dynamics &amp; Parenting</h4>
-        <p>Behavioural challenges, ruptured relationships, loneliness, and family dynamics.</p>
+        <p>Working through past experiences, emotional overwhelm, and trauma responses with care, safety, and at your own pace.</p>
       </div>
     </div>
   </div>
 
   <div class="svc-footer-cta reveal">
-    <a href="services.html" class="btn btn-purple">View All Services &nbsp;→</a>
+    <a href="services.html" class="btn btn-white">View All Services &nbsp;→</a>
   </div>
 </section>
 
@@ -1432,51 +1371,6 @@ footer {
 </section>
 
 
-<!-- TESTIMONIALS -->
-<section class="testimonial-section">
-  <div class="testimonial-header reveal">
-    <span class="eyebrow eyebrow--purple eyebrow-line" style="justify-content:center;">Kind Words</span>
-    <h2>What Clients Are Saying</h2>
-    <p>Genuine experiences from the people we have had the honour of walking beside.</p>
-  </div>
-  <div class="testimonial-grid">
-    <div class="t-card reveal">
-      <div class="t-stars">★★★★★</div>
-      <blockquote class="t-text">"Working with Sylvia has been life-changing. She has a remarkable gift for making you feel truly heard, and the tools she's given me have changed how I show up every single day."</blockquote>
-      <div class="t-client">
-        <div class="t-avatar">S</div>
-        <div>
-          <div class="t-name">Sarah M.</div>
-          <div class="t-type">Individual Client</div>
-        </div>
-      </div>
-    </div>
-    <div class="t-card reveal d1">
-      <div class="t-stars">★★★★★</div>
-      <blockquote class="t-text">"The tools I learned in our sessions have transformed how I handle stress and communicate with my family. Highly recommend to any parent feeling overwhelmed."</blockquote>
-      <div class="t-client">
-        <div class="t-avatar">J</div>
-        <div>
-          <div class="t-name">Jessica T.</div>
-          <div class="t-type">Parent Counselling Client</div>
-        </div>
-      </div>
-    </div>
-    <div class="t-card reveal d2">
-      <div class="t-stars">★★★★★</div>
-      <blockquote class="t-text">"A warm, compassionate, and professional experience from start to finish. Sylvia helped our family find its footing again. We are so grateful for her support."</blockquote>
-      <div class="t-client">
-        <div class="t-avatar">M</div>
-        <div>
-          <div class="t-name">Michael R.</div>
-          <div class="t-type">Family Counselling Client</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <!-- TEAM -->
 <section id="associates" class="team-section">
   <div class="team-inner">
@@ -1557,14 +1451,6 @@ footer {
           </div>
         </div>
       </a>
-    </div>
-
-    <div class="join-card reveal">
-      <div>
-        <h3>Are you a therapist who shares our values?</h3>
-        <p>We're growing. If you're a registered clinician looking for a warm, well-supported practice home in Ottawa, we'd love to hear from you.</p>
-      </div>
-      <a href="join-our-team.html" class="btn btn-gold">Learn About Joining →</a>
     </div>
   </div>
 </section>
