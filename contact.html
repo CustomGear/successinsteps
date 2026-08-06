@@ -572,13 +572,29 @@ footer { background:var(--navy-dark); padding:3.5rem 3rem 2rem; }
         </div>
 
         <div class="form-group">
+          <label for="referral">How Did You Hear About Us? <span style="color:var(--purple)">*</span></label>
+          <select id="referral" name="referral" required>
+            <option value="" disabled selected>Please select</option>
+            <option value="google">Google Search</option>
+            <option value="social">Social Media (Instagram, Facebook, LinkedIn)</option>
+            <option value="psychology-today">Psychology Today</option>
+            <option value="ocf">Ottawa Cancer Foundation</option>
+            <option value="physician">Physician / Healthcare Provider Referral</option>
+            <option value="friend-family">Friend or Family Referral</option>
+            <option value="past-client">Former or Current Client</option>
+            <option value="other">Other</option>
+          </select>
+          <p style="font-size:0.76rem;color:var(--stone);margin-top:0.2rem;">If a specific person or organization referred you, feel free to name them in your message below.</p>
+        </div>
+
+        <div class="form-group">
           <label for="message">Tell us a little about what you're looking for</label>
           <textarea id="message" name="message" placeholder="Share as much or as little as feels comfortable. There's no right answer here."></textarea>
         </div>
 
         <div class="form-privacy">
           <input type="checkbox" id="privacy" name="privacy" required>
-          <label for="privacy">I understand that this form is not a crisis line. In a mental health emergency, please call <strong>9-1-1</strong> or <strong>1-866-996-0991</strong> (Ottawa Crisis Line). I agree to the <a href="#">Privacy Policy</a>.</label>
+          <label for="privacy">I understand that this form is not a crisis line. In a mental health emergency, please call <strong>9-1-1</strong>, or contact the <strong>Mental Health Crisis Line: 613-722-6914</strong> or the <strong>Distress Centre: 613-238-3311</strong>. I agree to the <a href="#">Privacy Policy</a>.</label>
         </div>
 
         <button type="submit" class="btn btn-purple form-submit">Send My Message &nbsp;→</button>
