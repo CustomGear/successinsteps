@@ -209,10 +209,10 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   position:absolute; inset:0; z-index:1;
   background:linear-gradient(
     108deg,
-    rgba(12,6,30,0.95) 0%,
-    rgba(12,6,30,0.84) 26%,
-    rgba(12,6,30,0.52) 50%,
-    rgba(12,6,30,0.18) 70%,
+    rgba(12,6,30,0.82) 0%,
+    rgba(12,6,30,0.72) 26%,
+    rgba(12,6,30,0.46) 50%,
+    rgba(12,6,30,0.16) 70%,
     transparent 100%
   );
 }
@@ -467,6 +467,10 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   background:white; border:1px solid var(--sand);
   color:var(--stone); letter-spacing:0.01em;
 }
+.cred-note {
+  font-size:0.78rem; font-weight:300; font-style:italic;
+  color:var(--stone); margin:-1.1rem 0 1.4rem;
+}
 
 /* ══════════════════════════════════════════
    MODALITIES
@@ -669,6 +673,21 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
 .clinic-photo.sq   { aspect-ratio:1; }
 .clinic-photo.sq img { object-position:center 30%; }
 .clinic-photo.wr   { aspect-ratio:16/9; }
+.clinic-pullquote {
+  max-width:520px; margin:2.2rem 0 0;
+}
+.clinic-pullquote blockquote {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.2rem, 1.6vw, 1.45rem);
+  font-style:italic; font-weight:300;
+  color:var(--navy); line-height:1.6;
+  margin-bottom:0.6rem;
+}
+.clinic-pullquote cite {
+  font-style:normal; font-size:0.72rem;
+  letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--stone);
+}
 
 .values-row {
   display:grid; grid-template-columns:repeat(4,1fr);
@@ -1113,14 +1132,17 @@ footer {
       <p>Founder of Success in Steps since 2016, Sylvia is a recognized voice on parenting and mental health in Ottawa. She is a regular contributor to CTV Morning Live Ottawa, and has been featured in the Globe and Mail, CBC, Today's Parent, and Parenting Times.</p>
 
       <div class="cred-row">
-        <span class="cred-tag">MACP with Distinction</span>
         <span class="cred-tag">Registered Psychotherapist</span>
+        <span class="cred-tag">MACP with Distinction</span>
         <span class="cred-tag">Parent Coach</span>
         <span class="cred-tag">Behaviour Therapist</span>
-        <span class="cred-tag">BA Psychology (Carleton)</span>
-        <span class="cred-tag">ASIST Certified</span>
-        <span class="cred-tag">SafeTalk Trained</span>
+        <span class="cred-tag">Individual Counselling</span>
+        <span class="cred-tag">ADHD</span>
+        <span class="cred-tag">Anxiety</span>
+        <span class="cred-tag">Grief &amp; Loss</span>
+        <span class="cred-tag">Chronic Health Conditions</span>
       </div>
+      <p class="cred-note">Board Member, CHEO Oncology Parent &amp; Family Advisory Council</p>
       <a href="about.html" class="link-arrow">Read Sylvia's full story &nbsp;→</a>
     </div>
   </div>
@@ -1314,6 +1336,10 @@ footer {
         <img src="Branding - WebSize/Success_in_Steps_Branding_011_websize.jpg"
              alt="Serenity definition print in clinic">
       </div>
+    </div>
+    <div class="clinic-pullquote reveal">
+      <blockquote>"When we designed our logo, I wanted it to mean something. The hand you see is mine, a smaller hand held in a larger one, a quiet symbol of what this practice is built on: being there to hold space and support someone through their journey."</blockquote>
+      <cite>Sylvia Corzato, Founder</cite>
     </div>
     <div class="values-row">
       <div class="val-card reveal"><div class="val-word">self-care</div><div class="val-def">The practice of taking intentional steps to support your own well-being.</div></div>
