@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story — Success in Steps Therapy &amp; Counselling | Ottawa</title>
+<meta name="description" content="Why Success in Steps exists — Sylvia Corzato's story, the meaning behind our logo, and the team and community that make up our Ottawa practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1e3048;
+  --navy-mid: #2c4a6e;
+  --cream: #f8f4ef;
+  --warm-white: #fdfaf7;
+  --sand: #e8e0d5;
+  --taupe: #c4b8a8;
+  --stone: #8a8075;
+  --ink: #1e1e1e;
+  --sage: #5a7a65;
+  --sage-pale: #e6ede8;
+  --gold: #b89060;
+  --gold-pale: #f5eddf;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 3rem;
+  background: rgba(253,250,247,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--sand);
+}
+.nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+.nav-logo img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.logo-text { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--navy); font-weight: 700; line-height: 1.1; }
+.logo-text span { display: block; font-size: 0.68rem; font-weight: 400; color: var(--stone); font-family: 'Nunito Sans', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+.nav-links a { text-decoration: none; font-size: 0.85rem; font-weight: 500; color: var(--stone); letter-spacing: 0.03em; transition: color 0.2s; }
+.nav-links a:hover { color: var(--navy); }
+.nav-links a.active { color: var(--navy); font-weight: 600; }
+.nav-cta { background: var(--navy); color: white !important; padding: 0.55rem 1.3rem; border-radius: 30px; font-size: 0.82rem !important; transition: background 0.2s !important; }
+.nav-cta:hover { background: var(--navy-mid) !important; }
+.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.burger span { display: block; width: 22px; height: 1.5px; background: var(--ink); border-radius: 2px; transition: all 0.3s ease; }
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-mobile {
+  position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+  background: rgba(253,250,247,0.98); backdrop-filter: blur(12px);
+  padding: 1.2rem 2rem 2rem; border-bottom: 1px solid var(--sand);
+  display: none; flex-direction: column; opacity: 0; transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.nav-mobile.open { display: flex; opacity: 1; transform: none; }
+.nav-mobile a { text-decoration: none; font-size: 1rem; color: var(--ink); padding: 0.85rem 0; border-bottom: 1px solid var(--sand); }
+.nav-mobile a:last-child { border: none; margin-top: 0.7rem; }
+.nav-mobile .nav-cta { text-align: center; padding: 0.8rem; border-radius: 10px; display: block; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding-top: 72px;
+  background: var(--navy);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 4.5rem;
+}
+.page-header::before {
+  content: '';
+  position: absolute; top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 500px; border-radius: 50%;
+  background: rgba(255,255,255,0.03); pointer-events: none;
+}
+.page-header .eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--taupe); font-weight: 500; padding-top: 3.5rem; margin-bottom: 1rem;
+}
+.page-header h1 {
+  font-family: 'Libre Baskerville', serif; font-size: 2.6rem; color: white;
+  line-height: 1.15;
+}
+
+/* ── STORY CONTENT ── */
+.story-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+}
+
+.story-section {
+  margin-bottom: 3.5rem;
+}
+
+.story-section-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.story-section h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin-bottom: 1.3rem;
+  line-height: 1.3;
+}
+
+.story-section p {
+  font-size: 0.96rem;
+  color: #3a3a3a;
+  line-height: 1.95;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+
+.story-section p:last-child { margin-bottom: 0; }
+.story-section p a { color: var(--navy); text-decoration: underline; text-underline-offset: 2px; }
+.story-section p a:hover { color: var(--navy-mid); }
+
+.story-photo {
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 2.5rem 0;
+  box-shadow: 0 20px 60px rgba(30,48,72,0.12);
+}
+.story-photo img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+.story-photo-caption {
+  font-size: 0.78rem;
+  color: var(--stone);
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+
+.story-divider {
+  border: none;
+  border-top: 1px solid var(--sand);
+  margin: 3rem 0;
+}
+
+/* Invitation CTA */
+.story-cta {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 3.5rem 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.story-cta::before {
+  content: ''; position: absolute; bottom: -80px; right: -80px;
+  width: 260px; height: 260px; border-radius: 50%;
+  background: rgba(255,255,255,0.04); pointer-events: none;
+}
+.story-cta .eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--taupe); font-weight: 500; margin-bottom: 1rem;
+}
+.story-cta h3 {
+  font-family: 'Libre Baskerville', serif; font-size: 1.5rem; color: white;
+  margin-bottom: 1rem; line-height: 1.3;
+}
+.story-cta p {
+  font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.8;
+  font-weight: 300; max-width: 440px; margin: 0 auto 2rem;
+}
+.story-cta-buttons {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+}
+.btn-primary {
+  background: white; color: var(--navy);
+  padding: 0.8rem 1.8rem; border-radius: 30px;
+  text-decoration: none; font-size: 0.85rem; font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-primary:hover { background: var(--cream); transform: translateY(-1px); }
+.btn-outline {
+  border: 1.5px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+  padding: 0.8rem 1.8rem; border-radius: 30px;
+  text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.7); color: white; }
+
+/* ── FOOTER ── */
+footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2rem; }
+.footer-partnership { background: #1a2535; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 2rem 5rem; }
+.footer-partnership-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 3rem; }
+.partnership-label { display: block; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.5rem; }
+.partnership-text p { font-size: 0.83rem; color: rgba(255,255,255,0.5); line-height: 1.7; font-weight: 300; max-width: 560px; }
+.partnership-text strong { color: rgba(255,255,255,0.8); font-weight: 600; }
+.partnership-logo-link { flex-shrink: 0; opacity: 0.85; transition: opacity 0.2s; }
+.partnership-logo-link:hover { opacity: 1; }
+.partnership-logo { height: 60px; width: auto; display: block; filter: brightness(0) invert(1); }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+.footer-brand .logo-text { color: white; }
+.footer-brand .logo-text span { color: rgba(255,255,255,0.4); }
+.footer-desc { font-size: 0.82rem; line-height: 1.7; margin-top: 1rem; font-weight: 300; max-width: 280px; }
+.footer-col h4 { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); font-weight: 600; margin-bottom: 1rem; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-col ul a { text-decoration: none; font-size: 0.83rem; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.footer-col ul a:hover { color: rgba(255,255,255,0.8); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; max-width: 1100px; margin: 0 auto; }
+.social-row { display: flex; gap: 1rem; }
+.social-link { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.75rem; color: rgba(255,255,255,0.4); transition: background 0.2s, color 0.2s; }
+.social-link:hover { background: rgba(255,255,255,0.15); color: white; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .burger { display: flex; }
+  .page-header h1 { font-size: 2rem; }
+  .story-wrap { padding: 3rem 1.5rem 2rem; }
+  .story-cta { padding: 2.5rem 1.8rem; }
+  footer { padding: 2.5rem 2rem 1.5rem; }
+  .footer-partnership { padding: 2rem; }
+  .footer-partnership-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+    <div class="logo-text">Success in Steps<span>Therapy &amp; Counselling</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About Sylvia</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#clinic">Our Clinic</a></li>
+    <li><a href="our-team.html">Our Team</a></li>
+    <li><a href="join-our-team.html">Join Our Team</a></li>
+    <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+  </ul>
+  <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<nav class="nav-mobile" id="mobileNav">
+  <a href="about.html">About Sylvia</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#clinic">Our Clinic</a>
+  <a href="our-team.html">Our Team</a>
+  <a href="join-our-team.html">Join Our Team</a>
+  <a href="contact.html" class="nav-cta">Book a Session</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="eyebrow">Our Story</div>
+  <h1>Why Success in Steps Exists</h1>
+</div>
+
+<!-- STORY CONTENT -->
+<div class="story-wrap">
+
+  <div class="story-section">
+    <p>Success in Steps was founded in 2016, but its roots go back further than that, to years spent in the therapy room supporting children on the autism spectrum, and in the countless conversations with their parents, helping build the tools and strategies that fit their family's unique needs and strengths.</p>
+    <p>With over 25 years of combined experience as a psychotherapist, parent coach, and behaviour therapist, I've had the privilege of walking alongside individuals, parents, and families through some of their most difficult and most transformative moments. But my understanding of this work isn't only professional. As a parent myself, I know what it feels like to not have all the answers, to want to do right by the people you love, and to need somewhere safe to bring your questions without judgment. That lived experience shapes everything about how I practice, and how our clinic was built.</p>
+  </div>
+
+  <div class="story-photo">
+    <img src="Branding - WebSize/Success_in_Steps_Branding_004_websize.jpg" alt="The Success in Steps logo at our Ottawa clinic">
+  </div>
+  <div class="story-photo-caption">The hand in our logo — a small hand held in a larger one</div>
+
+  <div class="story-section">
+    <div class="story-section-title">A Hand to Hold</div>
+    <h2>The meaning behind our logo</h2>
+    <p>If you've seen our logo, you've seen a hand holding a smaller one. That image is personal. It's my own hand, and it represents something I believe is at the very heart of this work: that healing happens in relationship, not in isolation. Whether you're 15 or 75, navigating anxiety or grief or the weight of parenting, what you need first is someone steady beside you. That's what the hand means, and it's the promise behind every session at Success in Steps.</p>
+  </div>
+
+  <hr class="story-divider">
+
+  <div class="story-section">
+    <div class="story-section-title">A Team Built on Shared Values</div>
+    <h2>Growing, together</h2>
+    <p>What started as an individual practice has grown into a small, trusted team of clinicians, each bringing their own training, strengths, and perspective, while sharing one commitment: to meet every client with warmth, skill, and complete acceptance. Whether you work with me directly or with one of our associates, you can expect the same foundation of care.</p>
+  </div>
+
+  <div class="story-photo">
+    <img src="images/office-1.jpg" alt="A therapy room at Success in Steps">
+  </div>
+
+  <div class="story-section">
+    <div class="story-section-title">Beyond the Therapy Room</div>
+    <h2>Community and commitment</h2>
+    <p>My commitment to this work extends past our clinic walls. I'm a proud counselling provider with the Ottawa Cancer Foundation, supporting individuals and families affected by cancer through their mental health programs. I also serve on CHEO's Oncology Parent and Family Advisory Council, helping guide programs that support families navigating a childhood cancer diagnosis. And as a recognized voice on parenting and mental health in Ottawa, I've had the honour of contributing to Parenting Expert Segments on <a href="https://ottawa.ctvnews.ca/ctv-morning-live/what-was-on" target="_blank" rel="noopener">CTV Morning Live Ottawa</a>, and have been featured in the Globe and Mail, CBC, Today's Parent, and <a href="https://www.ottawaparentingtimes.ca/hire-parenting-coach/" target="_blank" rel="noopener">Ottawa Parenting Times Magazine</a>.</p>
+  </div>
+
+  <hr class="story-divider">
+
+  <!-- INVITATION CTA -->
+  <div class="story-cta">
+    <div class="eyebrow">An Invitation</div>
+    <h3>Life is a journey, not a destination</h3>
+    <p>It is an honour to walk beside you along the way. If you're ready to take a step, we'd love to hear from you.</p>
+    <div class="story-cta-buttons">
+      <a href="contact.html" class="btn-primary">Book a Consultation</a>
+      <a href="our-team.html" class="btn-outline">Meet Our Team</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-partnership">
+    <div class="footer-partnership-inner">
+      <div class="partnership-text">
+        <span class="partnership-label">In Collaboration With</span>
+        <p>Sylvia Corzato is a proud counselling provider with the <strong>Ottawa Cancer Foundation</strong>, offering psychotherapy support as part of their mental health programs for individuals and families affected by cancer.</p>
+      </div>
+      <a href="https://ottawacancer.ca" target="_blank" class="partnership-logo-link">
+        <img src="https://ottawacancer.ca/wp-content/uploads/2026/01/TOCF_ENG_RGB.png" alt="The Ottawa Cancer Foundation" class="partnership-logo">
+      </a>
+    </div>
+  </div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">
+        <img src="THUMB-SUCCESS@300x-1-300x300.webp" alt="Success in Steps">
+        <div class="logo-text" style="color:white;">Success in Steps<span>Therapy &amp; Counselling</span></div>
+      </a>
+      <p class="footer-desc">Compassionate psychotherapy and counselling in Ottawa, Ontario. Serving individuals and families since 2016.</p>
+      <p class="footer-desc" style="margin-top:0.5rem; font-size:0.78rem; opacity:0.7;">111 Colonnade Road North, Suite 201<br>Ottawa, Ontario K2E 7M3</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="about.html">About Sylvia</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="our-team.html">Our Team</a></li>
+        <li><a href="join-our-team.html">Join Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#individual">Individual Counselling (15+)</a></li>
+        <li><a href="services.html#parent">Parent Counselling</a></li>
+        <li><a href="services.html#family">Family Counselling</a></li>
+        <li><a href="contact.html">Book a Session</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Success in Steps. All rights reserved.</span>
+    <div class="social-row">
+      <a href="https://www.facebook.com/successinsteps" class="social-link" target="_blank">f</a>
+      <a href="https://www.linkedin.com/in/sylvia-corzato-successinsteps/" class="social-link" target="_blank">in</a>
+      <a href="https://www.instagram.com/success.in.steps.clinic" class="social-link" target="_blank">ig</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const burger = document.getElementById('burgerBtn');
+const mob = document.getElementById('mobileNav');
+burger.addEventListener('click', () => {
+  const o = burger.classList.toggle('open');
+  mob.classList.toggle('open', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+});
+mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open'); mob.classList.remove('open'); document.body.style.overflow = '';
+}));
+</script>
+
+</body>
+</html>
