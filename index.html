@@ -148,18 +148,19 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
 }
 .nav-logo { display:flex; align-items:center; gap:0.7rem; text-decoration:none; flex-shrink:0; }
 .nav-logo img { width:40px; height:40px; border-radius:50%; object-fit:cover; }
-.nav-logo-text { font-family:'Libre Baskerville',serif; font-size:1.15rem; font-weight:400; color:var(--ink); line-height:1.1; }
+.nav-logo-text { font-family:'Libre Baskerville',serif; font-size:1rem; font-weight:700; color:var(--navy); line-height:1.1; }
 .nav-logo-text small {
   display:block; font-family:'Nunito Sans',sans-serif;
-  font-size:0.6rem; font-weight:400; color:var(--stone);
-  letter-spacing:0.14em; text-transform:uppercase; margin-top:2px;
+  font-size:0.68rem; font-weight:400; color:var(--stone);
+  letter-spacing:0.08em; text-transform:uppercase;
 }
 .nav-links { list-style:none; display:flex; align-items:center; gap:2.2rem; }
-.nav-links a { text-decoration:none; font-size:0.84rem; font-weight:400; color:var(--stone); transition:color 0.2s; }
-.nav-links a:hover { color:var(--ink); }
+.nav-links a { text-decoration:none; font-size:0.85rem; font-weight:500; color:var(--stone); letter-spacing:0.03em; transition:color 0.2s; }
+.nav-links a:hover { color:var(--navy); }
+.nav-links a.active { color:var(--navy); font-weight:600; }
 .nav-cta {
   background:var(--purple) !important; color:#fff !important;
-  font-size:0.8rem !important; padding:0.58rem 1.35rem;
+  font-size:0.82rem !important; padding:0.58rem 1.35rem;
   border-radius:var(--r-pill); transition:all 0.3s var(--ease) !important;
 }
 .nav-cta:hover { background:var(--purple-mid) !important; transform:translateY(-1px); }
@@ -825,7 +826,7 @@ footer {
 .footer-brand-row img { width:36px; height:36px; border-radius:50%; opacity:0.85; }
 .footer-brand-name {
   font-family:'Libre Baskerville',serif;
-  font-size:1rem; font-weight:400; color:#fff; line-height:1.1;
+  font-size:1rem; font-weight:700; color:#fff; line-height:1.1;
 }
 .footer-brand-name small {
   display:block; font-family:'Nunito Sans',sans-serif;
