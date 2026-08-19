@@ -666,6 +666,7 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
   grid-template-rows:auto auto;
   gap:1rem; margin-bottom:3rem;
 }
+.clinic-cta { text-align:center; }
 .clinic-photo { border-radius:var(--r); overflow:hidden; }
 .clinic-photo img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
 .clinic-photo:hover img { transform:scale(1.04); }
@@ -673,38 +674,6 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
 .clinic-photo.sq   { aspect-ratio:1; }
 .clinic-photo.sq img { object-position:center 30%; }
 .clinic-photo.wr   { aspect-ratio:16/9; }
-.clinic-pullquote {
-  max-width:520px; margin:2.2rem 0 0;
-}
-.clinic-pullquote blockquote {
-  font-family:'Libre Baskerville',serif;
-  font-size:clamp(1.2rem, 1.6vw, 1.45rem);
-  font-style:italic; font-weight:400;
-  color:var(--navy); line-height:1.6;
-  margin-bottom:0.6rem;
-}
-.clinic-pullquote cite {
-  font-style:normal; font-size:0.72rem;
-  letter-spacing:0.14em; text-transform:uppercase;
-  color:var(--stone);
-}
-
-.values-row {
-  display:grid; grid-template-columns:repeat(4,1fr);
-  gap:1rem;
-}
-.val-card {
-  background:var(--cream); border:1px solid var(--sand);
-  border-radius:var(--r-sm); padding:1.5rem 1.3rem; text-align:center;
-  transition:box-shadow 0.3s, transform 0.3s;
-}
-.val-card:hover { box-shadow:0 4px 20px rgba(0,0,0,0.07); transform:translateY(-2px); }
-.val-word {
-  font-family:'Libre Baskerville',serif;
-  font-size:1.15rem; font-style:italic; font-weight:400;
-  color:var(--navy); margin-bottom:0.45rem;
-}
-.val-def { font-size:0.73rem; color:var(--stone); line-height:1.65; font-weight:300; }
 
 /* ══════════════════════════════════════════
    EXPERIENCE
@@ -933,7 +902,6 @@ footer {
   .clinic-header { grid-template-columns:1fr; gap:1.5rem; }
   .clinic-mosaic { grid-template-columns:1fr 1fr; }
   .clinic-photo.tall { grid-row:auto; aspect-ratio:4/3; }
-  .values-row { grid-template-columns:1fr 1fr; }
 
   .experience-inner { grid-template-columns:1fr; gap:2.5rem; }
   .experience-photo { aspect-ratio:4/3; }
@@ -967,7 +935,6 @@ footer {
   .hero-btns .btn { flex:1; min-width:130px; justify-content:center; text-align:center; padding:0.75rem 0.9rem; font-size:0.8rem; }
   .approach-grid { grid-template-columns:1fr; }
   .clinic-mosaic { grid-template-columns:1fr; }
-  .values-row { grid-template-columns:1fr 1fr; }
   .team-grid { grid-template-columns:1fr; }
   .cta-btns { flex-direction:column; }
   .cta-btns .btn { justify-content:center; }
@@ -1000,7 +967,7 @@ footer {
   <ul class="nav-links">
     <li><a href="about.html">About Sylvia</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="#clinic">Our Clinic</a></li>
+    <li><a href="our-clinic.html">Our Clinic</a></li>
     <li><a href="our-team.html">Our Team</a></li>
     <li><a href="join-our-team.html">Join Our Team</a></li>
     <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
@@ -1013,7 +980,7 @@ footer {
 <nav class="nav-mobile" id="mobileNav">
   <a href="about.html">About Sylvia</a>
   <a href="services.html">Services</a>
-  <a href="#clinic">Our Clinic</a>
+  <a href="our-clinic.html">Our Clinic</a>
   <a href="our-team.html">Our Team</a>
   <a href="join-our-team.html">Join Our Team</a>
   <a href="contact.html" class="nav-cta">Book a Session</a>
@@ -1339,15 +1306,8 @@ footer {
              alt="Doorway into a Success in Steps therapy room">
       </div>
     </div>
-    <div class="clinic-pullquote reveal">
-      <blockquote>"When we designed our logo, I wanted it to mean something. The hand you see is mine, a smaller hand held in a larger one, a quiet symbol of what this practice is built on: being there to hold space and support someone through their journey."</blockquote>
-      <cite>Sylvia Corzato, Founder</cite>
-    </div>
-    <div class="values-row">
-      <div class="val-card reveal"><div class="val-word">self-care</div><div class="val-def">The practice of taking intentional steps to support your own well-being.</div></div>
-      <div class="val-card reveal d1"><div class="val-word">thrive</div><div class="val-def">To prosper and flourish. Beyond simply getting by.</div></div>
-      <div class="val-card reveal d2"><div class="val-word">serenity</div><div class="val-def">Finding peace in what we cannot control. The foundation of calm.</div></div>
-      <div class="val-card reveal d3"><div class="val-word">mindfulness</div><div class="val-def">Present, aware, and non-judgmental. The beginning of real change.</div></div>
+    <div class="clinic-cta reveal">
+      <a href="our-clinic.html" class="btn btn-purple">Explore Our Clinic &nbsp;→</a>
     </div>
   </div>
 </section>
@@ -1529,6 +1489,7 @@ footer {
       <ul>
         <li><a href="about.html">About Sylvia</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="our-clinic.html">Our Clinic</a></li>
         <li><a href="our-team.html">Our Team</a></li>
         <li><a href="join-our-team.html">Join Our Team</a></li>
         <li><a href="contact.html">Contact</a></li>
