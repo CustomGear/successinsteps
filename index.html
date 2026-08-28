@@ -663,18 +663,19 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
 .clinic-header p { font-size:0.92rem; line-height:1.85; max-width:420px; }
 .clinic-mosaic {
   display:grid;
-  grid-template-columns:1.55fr 1fr 1fr;
-  grid-template-rows:auto auto;
+  grid-template-columns:1.5fr 1fr;
+  grid-template-rows:1fr 1fr;
   gap:1rem; margin-bottom:3rem;
 }
 .clinic-cta { text-align:center; }
 .clinic-photo { border-radius:var(--r); overflow:hidden; }
 .clinic-photo img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
 .clinic-photo:hover img { transform:scale(1.04); }
-.clinic-photo.tall { grid-row:1/3; aspect-ratio:2/3; }
-.clinic-photo.sq   { aspect-ratio:1; }
-.clinic-photo.sq img { object-position:center 30%; }
-.clinic-photo.wr   { aspect-ratio:16/9; }
+.clinic-photo.main  { grid-column:1; grid-row:1/3; aspect-ratio:3/2; }
+.clinic-photo.stack-top,
+.clinic-photo.stack-bottom { grid-column:2; aspect-ratio:4/5; }
+.clinic-photo.stack-top    { grid-row:1; }
+.clinic-photo.stack-bottom { grid-row:2; }
 
 /* ══════════════════════════════════════════
    EXPERIENCE
@@ -902,7 +903,7 @@ footer {
 
   .clinic-header { grid-template-columns:1fr; gap:1.5rem; }
   .clinic-mosaic { grid-template-columns:1fr 1fr; }
-  .clinic-photo.tall { grid-row:auto; aspect-ratio:4/3; }
+  .clinic-photo.main { grid-row:1/3; aspect-ratio:3/4; }
 
   .experience-inner { grid-template-columns:1fr; gap:2.5rem; }
   .experience-photo { aspect-ratio:4/3; }
@@ -936,6 +937,8 @@ footer {
   .hero-btns .btn { flex:1; min-width:130px; justify-content:center; text-align:center; padding:0.75rem 0.9rem; font-size:0.8rem; }
   .approach-grid { grid-template-columns:1fr; }
   .clinic-mosaic { grid-template-columns:1fr; }
+  .clinic-photo.main { grid-row:auto; aspect-ratio:3/2; }
+  .clinic-photo.stack-top, .clinic-photo.stack-bottom { grid-column:1; grid-row:auto; aspect-ratio:3/2; }
   .team-grid { grid-template-columns:1fr; }
   .cta-btns { flex-direction:column; }
   .cta-btns .btn { justify-content:center; }
@@ -1294,17 +1297,17 @@ footer {
       <p>Every detail of our clinic space, from the waiting room to the private therapy offices, has been intentionally designed to feel calm, warm, and safe.</p>
     </div>
     <div class="clinic-mosaic">
-      <div class="clinic-photo tall reveal">
-        <img src="images/healing-begins-cushion.jpg"
-             alt="Feelings wheel cushion at Success in Steps">
+      <div class="clinic-photo main reveal">
+        <img src="Branding - WebSize/Success_in_Steps_Branding_016_websize.jpg"
+             alt="Doorway into a Success in Steps therapy room">
       </div>
-      <div class="clinic-photo sq reveal d1">
+      <div class="clinic-photo stack-top reveal d1">
         <img src="images/healing-begins-logo.jpg"
              alt="Success in Steps logo close-up at reception">
       </div>
-      <div class="clinic-photo wr reveal d2">
-        <img src="Branding - WebSize/Success_in_Steps_Branding_016_websize.jpg"
-             alt="Doorway into a Success in Steps therapy room">
+      <div class="clinic-photo stack-bottom reveal d2">
+        <img src="images/healing-begins-cushion.jpg"
+             alt="Feelings wheel cushion at Success in Steps">
       </div>
     </div>
     <div class="clinic-cta reveal">

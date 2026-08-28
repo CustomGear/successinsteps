@@ -167,6 +167,31 @@ nav {
   margin: 3rem 0;
 }
 
+.community-collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 1rem;
+  margin: 2.5rem 0;
+}
+.community-photo {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(30,48,72,0.1);
+}
+.community-photo img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.community-caption {
+  font-size: 0.72rem;
+  color: var(--stone);
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 /* Invitation CTA */
 .story-cta {
   background: var(--navy);
@@ -241,6 +266,7 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
   .burger { display: flex; }
   .page-header h1 { font-size: 2rem; }
   .story-wrap { padding: 3rem 1.5rem 2rem; }
+  .community-collage { grid-template-columns: 1fr; }
   .story-cta { padding: 2.5rem 1.8rem; }
   footer { padding: 2.5rem 2rem 1.5rem; }
   .footer-partnership { padding: 2rem; }
@@ -315,13 +341,40 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
   </div>
 
   <div class="story-photo">
-    <img src="images/office-1.jpg" alt="A therapy room at Success in Steps">
+    <img src="images/about-reception-hallway.jpg" alt="The reception hallway at Success in Steps">
   </div>
 
   <div class="story-section">
     <div class="story-section-title">Beyond the Therapy Room</div>
     <h2>Community and commitment</h2>
-    <p>My commitment to this work extends past our clinic walls. I'm a proud counselling provider with the Ottawa Cancer Foundation, supporting individuals and families affected by cancer through their mental health programs. I also serve on CHEO's Oncology Parent and Family Advisory Council, helping guide programs that support families navigating a childhood cancer diagnosis. And as a recognized voice on parenting and mental health in Ottawa, I've had the honour of contributing to Parenting Expert Segments on <a href="https://ottawa.ctvnews.ca/ctv-morning-live/what-was-on" target="_blank" rel="noopener">CTV Morning Live Ottawa</a>, and have been featured in the Globe and Mail, CBC, Today's Parent, and <a href="https://www.ottawaparentingtimes.ca/hire-parenting-coach/" target="_blank" rel="noopener">Ottawa Parenting Times Magazine</a>.</p>
+    <p>My commitment to this work extends past our clinic walls. I'm a proud counselling provider with the Ottawa Cancer Foundation, supporting individuals and families affected by cancer through their mental health programs. I also serve on CHEO's Oncology Parent and Family Advisory Council, helping guide programs that support families navigating a childhood cancer diagnosis. And as a recognized voice on parenting and mental health in Ottawa, I've had the honour of contributing to Parenting Expert Segments on <a href="https://ottawa.ctvnews.ca/ctv-morning-live/what-was-on" target="_blank" rel="noopener">CTV Morning Live Ottawa</a>, and have been featured in the Globe and Mail, CBC, <a href="https://www.todaysparent.com/family/parenting/how-to-deal-when-your-kid-loves-to-brag/" target="_blank" rel="noopener">Today's Parent</a>, and <a href="https://www.ottawaparentingtimes.ca/hire-parenting-coach/" target="_blank" rel="noopener">Ottawa Parenting Times Magazine</a>.</p>
+  </div>
+
+  <div class="community-collage">
+    <div>
+      <div class="community-photo">
+        <img src="images/community-charity-cup.jpg" alt="Sylvia Corzato at the First Annual Charity Cup for Cancer">
+      </div>
+      <div class="community-caption">At the First Annual Charity Cup for Cancer, supporting the Ottawa Cancer Foundation</div>
+    </div>
+    <div>
+      <div class="community-photo">
+        <img src="images/community-ctv.jpg" alt="Sylvia Corzato on CTV Morning Live Ottawa">
+      </div>
+      <div class="community-caption">On set for a Parenting Expert Segment with CTV Morning Live Ottawa</div>
+    </div>
+    <div>
+      <div class="community-photo">
+        <img src="images/community-mfs.jpg" alt="Sylvia Corzato with Military Family Services">
+      </div>
+      <div class="community-caption">With Military Family Services at a community resource event</div>
+    </div>
+    <div>
+      <div class="community-photo">
+        <img src="images/community-event-1.jpg" alt="Sylvia Corzato with community partners in Ottawa">
+      </div>
+      <div class="community-caption">With community partners in Ottawa</div>
+    </div>
   </div>
 
   <hr class="story-divider">
