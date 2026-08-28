@@ -105,10 +105,12 @@ nav {
 .burger.open span:nth-child(2) { opacity: 0; }
 .burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 .nav-mobile {
-  position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
-  background: rgba(253,250,247,0.98); backdrop-filter: blur(12px);
+  position: fixed; top: 65px; left: 0; right: 0; bottom: 0; z-index: 99;
+  background: rgba(253,250,247,1); backdrop-filter: blur(12px);
   padding: 1.2rem 2rem 2rem; border-bottom: 1px solid var(--sand);
-  display: none; flex-direction: column; opacity: 0; transform: translateY(-8px);
+  overflow-y: auto;
+  display: none; flex-direction: column; justify-content: flex-start; align-items: stretch;
+  opacity: 0; transform: translateY(-8px);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .nav-mobile.open { display: flex; opacity: 1; transform: none; }
