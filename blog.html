@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Clinic — Success in Steps Therapy &amp; Counselling | Ottawa</title>
-<meta name="description" content="Take a look inside Success in Steps, our Ottawa clinic space designed to feel calm, private, and welcoming from the moment you walk in.">
+<title>Blog — Success in Steps Therapy &amp; Counselling | Ottawa</title>
+<meta name="description" content="Reflections on therapy, parenting, and mental health from Sylvia Corzato and the Success in Steps team in Ottawa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -127,73 +127,59 @@ nav {
   font-weight: 300; max-width: 640px;
 }
 
-/* ── INTRO ── */
-.clinic-intro {
+/* ── BLOG INTRO ── */
+.blog-intro {
   padding: 5rem 0 3.5rem;
   text-align: center;
 }
-.clinic-intro .section-intro { margin: 0 auto; }
+.blog-intro .section-intro { margin: 0 auto; }
 
-/* ── PHOTO GALLERY ── */
-.gallery-section { padding: 1rem 0 5rem; }
-.gallery-grid {
+/* ── BLOG GRID (ready for posts) ── */
+.blog-section { padding: 1rem 0 5rem; }
+.blog-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
-.gallery-photo {
+.blog-card {
+  display: block;
+  text-decoration: none;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 16px 44px rgba(30,48,72,0.1);
+  background: var(--warm-white);
+  border: 1px solid var(--sand);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
-.gallery-photo img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
-  transition: transform 0.5s ease;
-}
-.gallery-photo:hover img { transform: scale(1.04); }
-.gallery-photo.tall { grid-row: 1 / 3; aspect-ratio: 3/4; }
-.gallery-photo.wide { grid-column: span 2; aspect-ratio: 16/9; }
-.gallery-photo.sq { aspect-ratio: 1; }
+.blog-card:hover { box-shadow: 0 16px 44px rgba(30,48,72,0.1); transform: translateY(-3px); }
+.blog-card-photo { aspect-ratio: 3/2; overflow: hidden; }
+.blog-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.blog-card:hover .blog-card-photo img { transform: scale(1.04); }
+.blog-card-body { padding: 1.6rem 1.6rem 1.8rem; }
+.blog-card-date { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
+.blog-card-title { font-family: 'Libre Baskerville', serif; font-size: 1.15rem; color: var(--navy); line-height: 1.3; margin-bottom: 0.6rem; }
+.blog-card-excerpt { font-size: 0.85rem; color: var(--stone); line-height: 1.7; font-weight: 300; }
 
-/* ── LOGO PULL-QUOTE ── */
-.logo-quote-section {
+/* ── EMPTY STATE ── */
+.blog-empty {
+  text-align: center;
+  padding: 4rem 2rem;
   background: var(--cream);
-  border-top: 1px solid var(--sand);
-  border-bottom: 1px solid var(--sand);
-  padding: 5rem 0;
+  border: 1px solid var(--sand);
+  border-radius: 16px;
 }
-.logo-quote-inner {
-  max-width: 700px; margin: 0 auto; text-align: center; padding: 0 2rem;
+.blog-empty-icon {
+  width: 48px; height: 48px; margin: 0 auto 1.4rem;
+  border-radius: 50%; background: var(--gold-pale);
+  display: flex; align-items: center; justify-content: center;
 }
-.logo-quote-inner blockquote {
-  font-family: 'Libre Baskerville', serif;
-  font-style: italic; font-weight: 400;
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
-  color: var(--navy); line-height: 1.6;
-  margin-bottom: 1rem;
+.blog-empty h3 {
+  font-family: 'Libre Baskerville', serif; font-size: 1.3rem;
+  color: var(--navy); margin-bottom: 0.7rem; font-weight: 400;
 }
-.logo-quote-inner cite {
-  font-style: normal; font-size: 0.72rem; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--stone);
+.blog-empty p {
+  font-size: 0.9rem; color: var(--stone); line-height: 1.8;
+  max-width: 440px; margin: 0 auto; font-weight: 300;
 }
-
-/* ── VALUES ── */
-.values-section { padding: 5rem 0; text-align: center; }
-.values-section .section-eyebrow, .values-section .section-h2 { text-align: center; }
-.values-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-  margin-top: 3rem; text-align: left;
-}
-.val-card {
-  background: var(--cream); border: 1px solid var(--sand);
-  border-radius: 14px; padding: 1.8rem 1.6rem;
-}
-.val-word {
-  font-family: 'Libre Baskerville', serif; font-style: italic; font-size: 1.2rem;
-  color: var(--navy); margin-bottom: 0.6rem;
-}
-.val-def { font-size: 0.82rem; color: var(--stone); line-height: 1.7; font-weight: 300; }
 
 /* ── CTA STRIP ── */
 .cta-strip {
@@ -264,14 +250,9 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
   .burger { display: flex; }
   .page-header h1 { font-size: 2rem; }
   .section-wrap { padding: 0 2rem; }
-  .clinic-intro { padding: 3.5rem 0 2.5rem; }
-  .gallery-section { padding: 0.5rem 0 3.5rem; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-photo.tall { grid-row: auto; aspect-ratio: 4/3; }
-  .gallery-photo.wide { grid-column: span 2; }
-  .logo-quote-section { padding: 3.5rem 0; }
-  .values-section { padding: 3.5rem 0; }
-  .values-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .blog-intro { padding: 3.5rem 0 2.5rem; }
+  .blog-section { padding: 0.5rem 0 3.5rem; }
+  .blog-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .cta-strip { padding: 3.5rem 2rem; }
   footer { padding: 2.5rem 2rem 1.5rem; }
   .footer-partnership { padding: 2rem; }
@@ -280,10 +261,7 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
 }
 @media (max-width: 600px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-photo.tall { grid-row: auto; }
-  .gallery-photo.wide { grid-column: auto; }
-  .values-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -298,7 +276,7 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
   <ul class="nav-links">
     <li><a href="about.html">About Sylvia</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="our-clinic.html" class="active">Our Clinic</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
     <li><a href="our-team.html">Our Team</a></li>
     <li><a href="join-our-team.html">Join Our Team</a></li>
     <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
@@ -308,7 +286,7 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
 <nav class="nav-mobile" id="mobileNav">
   <a href="about.html">About Sylvia</a>
   <a href="services.html">Services</a>
-  <a href="our-clinic.html">Our Clinic</a>
+  <a href="blog.html">Blog</a>
   <a href="our-team.html">Our Team</a>
   <a href="join-our-team.html">Join Our Team</a>
   <a href="contact.html" class="nav-cta">Book a Session</a>
@@ -316,59 +294,45 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <div class="eyebrow">Our Ottawa Clinic</div>
-  <h1>Where <em>healing begins</em></h1>
-  <p>Every detail of our clinic space, from the waiting room to the private therapy offices, has been intentionally designed to feel calm, warm, and safe.</p>
+  <div class="eyebrow">The Blog</div>
+  <h1>Thoughts on therapy <em>&amp; parenting</em></h1>
+  <p>Reflections on mental health, parenting, and everyday life from Sylvia Corzato and the Success in Steps team.</p>
 </div>
 
 <!-- INTRO -->
-<div class="clinic-intro">
+<div class="blog-intro">
   <div class="section-wrap">
-    <p class="section-intro">Located at 111 Colonnade Road North in Ottawa, our clinic was designed with one goal in mind: to feel like the opposite of a clinical space. Warm wood tones, soft textures, and quiet corners create an environment where you can exhale the moment you walk in, whether you're here for your first session or your fiftieth.</p>
+    <p class="section-intro">This is where we'll be sharing thoughts on the topics that come up most in our sessions, from parenting and anxiety to grief and everyday resilience. New here, so check back soon.</p>
   </div>
 </div>
 
-<!-- PHOTO GALLERY -->
-<div class="gallery-section">
-  <div class="section-wrap">
-    <div class="gallery-grid">
-      <div class="gallery-photo tall reveal">
-        <img src="images/reception-logo-hallway.jpg" alt="Success in Steps reception and hallway">
-      </div>
-      <div class="gallery-photo sq reveal d1">
-        <img src="images/healing-begins-cushion.jpg" alt="Feelings wheel cushion at Success in Steps">
-      </div>
-      <div class="gallery-photo sq reveal d2">
-        <img src="Branding - WebSize/Success_in_Steps_Branding_016_websize.jpg" alt="Doorway into a Success in Steps therapy room">
-      </div>
-      <div class="gallery-photo wide reveal d1">
-        <img src="Branding - WebSize/Success_in_Steps_Branding_017_websize.jpg" alt="A therapy room seating area at Success in Steps">
-      </div>
-      <div class="gallery-photo sq reveal d2">
-        <img src="Branding - WebSize/Success_in_Steps_Branding_009_websize.jpg" alt="A calm waiting room at Success in Steps">
-      </div>
-    </div>
-  </div>
-</div>
+<!-- BLOG GRID -->
+<!--
+  When your first post is ready:
+  1. Duplicate blog-post-template.html, fill it in, and save it as its own file
+     (e.g. published-posts/back-to-school-anxiety.html)
+  2. Replace the .blog-empty block below with a .blog-grid of .blog-card
+     links, one per post, e.g.:
 
-<!-- LOGO PULL-QUOTE -->
-<div class="logo-quote-section">
-  <div class="logo-quote-inner reveal">
-    <blockquote>"When we designed our logo, I wanted it to mean something. The hand you see is mine, a smaller hand held in a larger one, a quiet symbol of what this practice is built on: being there to hold space and support someone through their journey."</blockquote>
-    <cite>Sylvia Corzato, Founder</cite>
-  </div>
-</div>
-
-<!-- VALUES -->
-<div class="values-section">
+     <div class="blog-grid">
+       <a href="your-post-file.html" class="blog-card reveal">
+         <div class="blog-card-photo"><img src="images/your-image.jpg" alt="..."></div>
+         <div class="blog-card-body">
+           <div class="blog-card-date">Month Day, Year</div>
+           <div class="blog-card-title">Your Post Title</div>
+           <div class="blog-card-excerpt">A one- or two-sentence teaser.</div>
+         </div>
+       </a>
+     </div>
+-->
+<div class="blog-section">
   <div class="section-wrap">
-    <div class="section-eyebrow gold">What We Believe In</div>
-    <h2 class="section-h2">The words behind the space</h2>
-    <div class="values-grid">
-      <div class="val-card reveal"><div class="val-word">self-care</div><div class="val-def">The practice of taking intentional steps to support your own well-being.</div></div>
-      <div class="val-card reveal d1"><div class="val-word">thrive</div><div class="val-def">To prosper and flourish. Beyond simply getting by.</div></div>
-      <div class="val-card reveal d2"><div class="val-word">serenity</div><div class="val-def">Finding peace in what we cannot control. The foundation of calm.</div></div>
-      <div class="val-card reveal d3"><div class="val-word">mindfulness</div><div class="val-def">Present, aware, and non-judgmental. The beginning of real change.</div></div>
+    <div class="blog-empty reveal">
+      <div class="blog-empty-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b89060" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+      </div>
+      <h3>Our first post is coming soon</h3>
+      <p>We're working on it. In the meantime, follow along on Instagram or Facebook, or reach out directly if there's something on your mind you'd like support with.</p>
     </div>
   </div>
 </div>
@@ -411,7 +375,7 @@ footer { background: #141e2a; color: rgba(255,255,255,0.5); padding: 3rem 5rem 2
       <ul>
         <li><a href="about.html">About Sylvia</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="our-clinic.html">Our Clinic</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="our-team.html">Our Team</a></li>
         <li><a href="join-our-team.html">Join Our Team</a></li>
         <li><a href="contact.html">Contact</a></li>

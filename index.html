@@ -660,21 +660,25 @@ p { line-height:1.85; font-weight:300; color:var(--muted); }
 }
 .clinic-header h2 { font-size:clamp(2rem, 2.8vw, 3rem); color:var(--navy); }
 .clinic-header p { font-size:0.92rem; line-height:1.85; max-width:420px; }
-.clinic-mosaic {
-  display:grid;
-  grid-template-columns:1.5fr 1fr;
-  grid-template-rows:1fr 1fr;
-  gap:1rem; margin-bottom:3rem;
+.clinic-hero-photo { border-radius:var(--r); overflow:hidden; margin-bottom:1rem; }
+.clinic-hero-photo img { width:100%; aspect-ratio:3/2; object-fit:cover; display:block; transition:transform 0.5s ease; }
+.clinic-hero-photo:hover img { transform:scale(1.02); }
+.clinic-square-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem; margin-bottom:2.5rem; }
+.clinic-square { border-radius:var(--r); overflow:hidden; }
+.clinic-square img { width:100%; aspect-ratio:1; object-fit:cover; display:block; transition:transform 0.5s ease; }
+.clinic-square:hover img { transform:scale(1.04); }
+.clinic-quote {
+  border-left:4px solid var(--gold);
+  background:var(--gold-light);
+  padding:1.6rem 2.2rem;
+  border-radius:0 12px 12px 0;
+  margin-bottom:3rem;
 }
-.clinic-cta { text-align:center; }
-.clinic-photo { border-radius:var(--r); overflow:hidden; }
-.clinic-photo img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
-.clinic-photo:hover img { transform:scale(1.04); }
-.clinic-photo.main  { grid-column:1; grid-row:1/3; aspect-ratio:3/2; }
-.clinic-photo.stack-top,
-.clinic-photo.stack-bottom { grid-column:2; aspect-ratio:4/5; }
-.clinic-photo.stack-top    { grid-row:1; }
-.clinic-photo.stack-bottom { grid-row:2; }
+.clinic-quote p {
+  font-family:'Libre Baskerville', serif;
+  font-size:1.05rem; font-style:italic;
+  color:var(--navy); line-height:1.7;
+}
 
 /* ══════════════════════════════════════════
    EXPERIENCE
@@ -901,8 +905,6 @@ footer {
   .photo-strip-overlay { padding:2.5rem 2rem; }
 
   .clinic-header { grid-template-columns:1fr; gap:1.5rem; }
-  .clinic-mosaic { grid-template-columns:1fr 1fr; }
-  .clinic-photo.main { grid-row:1/3; aspect-ratio:3/4; }
 
   .experience-inner { grid-template-columns:1fr; gap:2.5rem; }
   .experience-photo { aspect-ratio:4/3; }
@@ -935,9 +937,7 @@ footer {
   .hero-btns { flex-direction:row; gap:0.6rem; flex-wrap:wrap; margin-bottom:2rem; }
   .hero-btns .btn { flex:1; min-width:130px; justify-content:center; text-align:center; padding:0.75rem 0.9rem; font-size:0.8rem; }
   .approach-grid { grid-template-columns:1fr; }
-  .clinic-mosaic { grid-template-columns:1fr; }
-  .clinic-photo.main { grid-row:auto; aspect-ratio:3/2; }
-  .clinic-photo.stack-top, .clinic-photo.stack-bottom { grid-column:1; grid-row:auto; aspect-ratio:3/2; }
+  .clinic-square-row { grid-template-columns:1fr; }
   .team-grid { grid-template-columns:1fr; }
   .cta-btns { flex-direction:column; }
   .cta-btns .btn { justify-content:center; }
@@ -970,7 +970,7 @@ footer {
   <ul class="nav-links">
     <li><a href="about.html">About Sylvia</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="our-clinic.html">Our Clinic</a></li>
+    <li><a href="blog.html">Blog</a></li>
     <li><a href="our-team.html">Our Team</a></li>
     <li><a href="join-our-team.html">Join Our Team</a></li>
     <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
@@ -983,7 +983,7 @@ footer {
 <nav class="nav-mobile" id="mobileNav">
   <a href="about.html">About Sylvia</a>
   <a href="services.html">Services</a>
-  <a href="our-clinic.html">Our Clinic</a>
+  <a href="blog.html">Blog</a>
   <a href="our-team.html">Our Team</a>
   <a href="join-our-team.html">Join Our Team</a>
   <a href="contact.html" class="nav-cta">Book a Session</a>
@@ -1295,22 +1295,26 @@ footer {
       </div>
       <p>Every detail of our clinic space, from the waiting room to the private therapy offices, has been intentionally designed to feel calm, warm, and safe.</p>
     </div>
-    <div class="clinic-mosaic">
-      <div class="clinic-photo main reveal">
-        <img src="Branding - WebSize/Success_in_Steps_Branding_016_websize.jpg"
-             alt="Doorway into a Success in Steps therapy room">
-      </div>
-      <div class="clinic-photo stack-top reveal d1">
+    <div class="clinic-hero-photo reveal">
+      <img src="Branding - WebSize/Success_in_Steps_Branding_016_websize.jpg"
+           alt="Doorway into a Success in Steps therapy room">
+    </div>
+    <div class="clinic-square-row">
+      <div class="clinic-square reveal">
         <img src="images/healing-begins-logo.jpg"
              alt="Success in Steps logo close-up at reception">
       </div>
-      <div class="clinic-photo stack-bottom reveal d2">
+      <div class="clinic-square reveal d1">
         <img src="images/healing-begins-cushion.jpg"
              alt="Feelings wheel cushion at Success in Steps">
       </div>
+      <div class="clinic-square reveal d2">
+        <img src="Branding - WebSize/Success_in_Steps_Branding_026_websize.jpg"
+             alt="Therapy room with blue accent wall at Success in Steps">
+      </div>
     </div>
-    <div class="clinic-cta reveal">
-      <a href="our-clinic.html" class="btn btn-purple">Explore Our Clinic &nbsp;→</a>
+    <div class="clinic-quote reveal">
+      <p>"When we designed our logo, I wanted it to mean something. The hand you see is mine, a smaller hand held in a larger one, a quiet symbol of what this practice is built on: being there to hold space and support someone through their journey."</p>
     </div>
   </div>
 </section>
@@ -1492,7 +1496,7 @@ footer {
       <ul>
         <li><a href="about.html">About Sylvia</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="our-clinic.html">Our Clinic</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="our-team.html">Our Team</a></li>
         <li><a href="join-our-team.html">Join Our Team</a></li>
         <li><a href="contact.html">Contact</a></li>
